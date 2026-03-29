@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabrício Henrique — Dev & Marketing Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #18181f;
+    --border: rgba(255,255,255,0.07);
+    --border-light: rgba(255,255,255,0.13);
+    --accent: #6c63ff;
+    --accent2: #a78bfa;
+    --accent-glow: rgba(108,99,255,0.18);
+    --text: #f0eefc;
+    --muted: #8b8a9b;
+    --muted2: #5a5968;
+    --green: #22d3a0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── GRAIN OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.032;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(16px);
+    background: rgba(10,10,15,0.75);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo span { color: var(--accent); }
+  .logo-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px; height: 38px;
+    background: var(--bg3);
+    border: 1.5px solid var(--accent);
+    border-radius: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .logo-badge::after {
+    content: '';
+    position: absolute;
+    top: -3px; right: -3px;
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+  }
+  .logo-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .logo-name-main {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .logo-name-sub {
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--border-light);
+    color: var(--text);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .nav-cta:hover { background: var(--bg3); border-color: var(--accent); color: var(--accent2); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 2.5rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-glow2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(34,211,160,0.06) 0%, transparent 70%);
+    bottom: 0; left: 10%;
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg3);
+    border: 1px solid var(--border-light);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    color: var(--green);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .badge-dot {
+    width: 7px; height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 50%, var(--green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 540px;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover { background: #7d75ff; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--muted);
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid var(--border-light);
+  }
+  .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+  .stat-num span { color: var(--accent); }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; letter-spacing: 0.03em; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+  }
+  .section-sub { color: var(--muted); max-width: 560px; font-size: 1rem; font-weight: 300; }
+
+  /* ── SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .service-card {
+    background: var(--bg2);
+    padding: 2rem 1.8rem;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .service-card:hover { background: var(--bg3); }
+  .service-icon {
+    width: 44px; height: 44px;
+    background: var(--accent-glow);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(108,99,255,0.2);
+  }
+  .service-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+  }
+  .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+  .service-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.72rem;
+    color: var(--accent2);
+    background: rgba(108,99,255,0.12);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── ABOUT ── */
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3.5rem;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-card {
+    background: var(--bg2);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .about-initials {
+    width: 72px; height: 72px;
+    background: var(--bg3);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+  .about-card-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .about-card-role { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
+  .about-skills-row {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;
+  }
+  .skill-chip {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+  }
+  .about-text h2 { margin-bottom: 1.2rem; }
+  .about-text p { color: var(--muted); font-size: 0.97rem; font-weight: 300; margin-bottom: 1rem; line-height: 1.8; }
+  .about-highlight {
+    background: var(--bg2);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1.5rem;
+    font-size: 0.92rem;
+    color: var(--text);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* ── TECH STACK ── */
+  .tech-section {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 4rem 2.5rem;
+  }
+  .tech-inner { max-width: 1100px; margin: 0 auto; }
+  .tech-label { font-size: 0.75rem; color: var(--muted2); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem; text-align: center; }
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .tech-item {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.83rem;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+  .tech-item:hover { border-color: var(--border-light); color: var(--text); }
+
+  /* ── CONTACT ── */
+  .contact-wrapper {
+    background: var(--bg2);
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 3.5rem;
+  }
+  .contact-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(108,99,255,0.1) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .contact-wrapper h2 { margin-bottom: 0.8rem; position: relative; }
+  .contact-wrapper p { color: var(--muted); margin-bottom: 2.5rem; max-width: 440px; margin-left: auto; margin-right: auto; font-weight: 300; position: relative; }
+  .contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .contact-link {
+    background: var(--bg3);
+    border: 1px solid var(--border-light);
+    color: var(--muted);
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: all 0.2s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .contact-link:hover { color: var(--text); border-color: var(--accent); }
+  .contact-link .icon { font-size: 1rem; }
+
+  /* ── DEPOIMENTOS ── */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 3.5rem;
+  }
+  .testimonial-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.8rem;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+  .testimonial-card:hover { border-color: var(--border-light); }
+  .testimonial-quote {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.4;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .testimonial-text {
+    font-size: 0.92rem;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+  }
+  .testimonial-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--accent-glow);
+    border: 1px solid rgba(108,99,255,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent2);
+    flex-shrink: 0;
+  }
+  .testimonial-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .testimonial-role { font-size: 0.75rem; color: var(--muted2); }
+  .stars { color: #f5a623; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 0.8rem; }
+
+  /* ── FORMULÁRIO ── */
+  .form-wrapper {
+    background: var(--bg2);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-top: 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .form-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 100% 0%, rgba(108,99,255,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    font-weight: 400;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: var(--bg3);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: border-color 0.2s;
+    outline: none;
+    width: 100%;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--muted2); }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus { border-color: var(--accent); }
+  .form-group select option { background: var(--bg3); color: var(--text); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .form-note { font-size: 0.78rem; color: var(--muted2); }
+  #form-status {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    display: none;
+  }
+  #form-status.success {
+    display: block;
+    background: rgba(34,211,160,0.1);
+    border: 1px solid rgba(34,211,160,0.3);
+    color: var(--green);
+  }
+  #form-status.error {
+    display: block;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: #f87171;
+  }
+  .btn-sending { opacity: 0.6; cursor: not-allowed; }
+
+  /* ── SUCESSO ── */
+  #form-body { transition: opacity 0.3s ease, transform 0.3s ease; }
+  #form-success {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    gap: 1.2rem;
+  }
+  .success-icon {
+    width: 72px; height: 72px;
+    background: rgba(34,211,160,0.12);
+    border: 1.5px solid rgba(34,211,160,0.35);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+  }
+  .success-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .success-sub {
+    font-size: 0.92rem;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 380px;
+    line-height: 1.7;
+  }
+  .success-details {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  .success-chip {
+    background: var(--bg3);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .success-chip span { color: var(--green); font-size: 0.85rem; }
+  .btn-novo {
+    background: transparent;
+    border: 1px solid var(--border-light);
+    color: var(--muted);
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
+  }
+  .btn-novo:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+
+  /* ── PRICING ── */
+  .pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 2.5rem 0 3rem;
+  }
+  .toggle-label { font-size: 0.88rem; color: var(--muted); cursor: pointer; transition: color 0.2s; }
+  .toggle-label.active { color: var(--text); font-weight: 500; }
+  .toggle-pill {
+    width: 48px; height: 26px;
+    background: var(--bg3);
+    border: 1px solid var(--border-light);
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .toggle-pill.ads-mode { background: var(--accent); border-color: var(--accent); }
+  .toggle-knob {
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 18px; height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.25s;
+  }
+  .toggle-pill.ads-mode .toggle-knob { transform: translateX(22px); }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .pricing-card {
+    background: var(--bg2);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 2rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .pricing-card:hover { border-color: rgba(255,255,255,0.22); }
+  .pricing-card.featured {
+    background: var(--bg3);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    margin: 0;
+    z-index: 1;
+  }
+  .pricing-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+  .pricing-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .pricing-desc {
+    font-size: 0.8rem;
+    color: var(--muted2);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 1.4rem;
+    min-height: 48px;
+  }
+  .pricing-price {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+  }
+  .pricing-price span { font-size: 0.85rem; font-weight: 400; color: var(--muted); font-family: 'DM Sans', sans-serif; letter-spacing: 0; }
+  .pricing-price.custom-price { font-size: 1.8rem; color: var(--accent2); font-family: 'Syne', sans-serif; }
+  .pricing-divider { height: 1px; background: var(--border); margin: 1.4rem 0; }
+  .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; flex: 1; margin-bottom: 1.8rem; }
+  .pricing-features li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+  .pricing-features li.off { opacity: 0.4; text-decoration: line-through; }
+  .feat-check { color: var(--green); font-size: 0.85rem; flex-shrink: 0; margin-top: 1px; }
+  .feat-x { color: var(--muted2); font-size: 0.85rem; flex-shrink: 0; margin-top: 1px; }
+  .pricing-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    border: 1px solid var(--border-light);
+    background: transparent;
+    color: var(--text);
+    margin-top: auto;
+  }
+  .pricing-btn:hover { background: var(--bg3); border-color: rgba(255,255,255,0.25); }
+  .pricing-btn.featured-btn {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .pricing-btn.featured-btn:hover { background: #7d75ff; }
+  .pricing-panel { display: none; }
+  .pricing-panel.active { display: grid; }
+  @media (max-width: 900px) {
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  footer p { font-size: 0.8rem; color: var(--muted2); }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .social-btn:hover { color: var(--text); border-color: var(--accent); }
+
+  /* ── DIVIDERS ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.2rem; }
+    .nav-links { display: none; }
+    .hero { padding: 6rem 1.2rem 4rem; }
+    .hero-stats { gap: 2rem; }
+    section { padding: 4rem 1.2rem; }
+    .about-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-grid { grid-template-columns: 1fr; }
+    .contact-wrapper { padding: 2.5rem 1.5rem; }
+    .form-wrapper { padding: 2rem 1.2rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="logo-badge">{FH}</span>
+    <span class="logo-name">
+      <span class="logo-name-main">Fabrício Henrique</span>
+      <span class="logo-name-sub">DEV & MARKETING DIGITAL</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="#contato" class="nav-cta">Falar comigo</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      Disponível para novos projetos
+    </div>
+    <h1>
+      Tecnologia & <em>marketing digital</em><br>
+      que funcionam.
+    </h1>
+    <p class="hero-sub">
+      Fabrício Henrique — desenvolvedor e especialista em tráfego pago. Crio soluções completas: de sistemas e aplicativos a campanhas que geram resultado real.
+    </p>
+    <div class="hero-actions">
+      <a href="#servicos" class="btn-primary">Ver serviços</a>
+      <a href="#contato" class="btn-ghost">Entrar em contato</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">10<span>+</span></div>
+        <div class="stat-label">Tipos de soluções</div>
+      </div>
+      <div>
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Comprometimento</div>
+      </div>
+      <div>
+        <div class="stat-num">1<span>×1</span></div>
+        <div class="stat-label">Atendimento direto</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TECH STRIP -->
+<div class="tech-section">
+  <div class="tech-inner">
+    <p class="tech-label">Tecnologias & ferramentas</p>
+    <div class="tech-list">
+      <span class="tech-item">Google Ads</span>
+      <span class="tech-item">Meta Ads</span>
+      <span class="tech-item">React</span>
+      <span class="tech-item">Node.js</span>
+      <span class="tech-item">Google Sheets API</span>
+      <span class="tech-item">Gmail API</span>
+      <span class="tech-item">Firebase</span>
+      <span class="tech-item">HTML / CSS / JS</span>
+      <span class="tech-item">WordPress</span>
+      <span class="tech-item">MySQL</span>
+      <span class="tech-item">PHP</span>
+      <span class="tech-item">Figma</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <p class="section-label">O que eu faço</p>
+  <h2 class="section-title">Soluções sob medida<br>para o seu negócio</h2>
+  <p class="section-sub">Do anúncio ao sistema, entrego o que precisa funcionar — sem enrolação.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📣</div>
+      <h3>Google Ads</h3>
+      <p>Criação e gestão de campanhas no Google para atrair clientes que já estão procurando o que você oferece. Foco em conversão e ROI.</p>
+      <span class="service-tag">Tráfego Pago</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌐</div>
+      <h3>Sites & Landing Pages</h3>
+      <p>Páginas rápidas, responsivas e otimizadas para converter. Design moderno e código limpo, do zero ao ar.</p>
+      <span class="service-tag">Desenvolvimento</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏥</div>
+      <h3>Sistemas para Clínicas</h3>
+      <p>Sistemas de agendamento, prontuários e gestão para clínicas e consultórios. Prático, seguro e personalizado.</p>
+      <span class="service-tag">Sistema Web</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <h3>Aplicativos</h3>
+      <p>Aplicativos web e mobile para automatizar processos, gerenciar equipes ou conectar clientes ao seu negócio.</p>
+      <span class="service-tag">App</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🍔</div>
+      <h3>Cardápio Digital</h3>
+      <p>Cardápio com carrinho de compras, filtros por categoria e sistema de pedidos em tempo real. Perfeito para restaurantes e deliveries.</p>
+      <span class="service-tag">E-commerce</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔗</div>
+      <h3>Automação & Integração</h3>
+      <p>Formulários integrados ao Google Sheets e Gmail. Automatize o recebimento de leads, cadastros e notificações sem esforço manual.</p>
+      <span class="service-tag">Automação</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SOBRE -->
+<section id="sobre">
+  <p class="section-label">Quem sou eu</p>
+  <div class="about-wrapper">
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="about-initials">{FH}</div>
+        <div class="about-card-name">Fabrício Henrique</div>
+        <div class="about-card-role">Dev Freelancer & Especialista em Tráfego Pago</div>
+        <div style="width:100%;height:1px;background:var(--border);margin:1.2rem 0"></div>
+        <div style="font-size:0.8rem;color:var(--muted);display:flex;flex-direction:column;gap:0.7rem;">
+          <div>📍 Brasil</div>
+          <div>💼 Freelancer autônomo</div>
+          <div style="color:var(--green)">🟢 Disponível para projetos</div>
+        </div>
+        <div class="about-skills-row">
+          <span class="skill-chip">Ads</span>
+          <span class="skill-chip">Dev Web</span>
+          <span class="skill-chip">Sistemas</span>
+          <span class="skill-chip">Apps</span>
+          <span class="skill-chip">Automação</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h2 class="section-title">Uma história de<br>curiosidade e construção</h2>
+      <p>Minha trajetória começou com uma vontade simples: entender como as coisas funcionam. Isso me levou ao mundo da tecnologia — onde aprendi a construir sites, sistemas e aplicativos do zero.</p>
+      <p>Com o tempo, descobri que criar uma solução incrível não é suficiente se ninguém a encontra. Foi aí que o marketing digital entrou: aprendi a fazer campanhas no Google Ads que colocam negócios na frente de quem realmente importa.</p>
+      <p>Hoje, combino essas duas habilidades como freelancer. Não terceirizo, não delego — sou eu que sento, projeto e entrego cada projeto com atenção nos detalhes.</p>
+      <div class="about-highlight">
+        "Gosto de entender o problema real antes de qualquer linha de código ou campanha. O melhor resultado vem de uma solução pensada, não de um template aplicado."
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <p class="section-label">O que dizem</p>
+  <h2 class="section-title">Clientes que<br>confiam no trabalho</h2>
+  <p class="section-sub">Resultados reais de quem já trabalhou comigo. Em breve, seu projeto aqui também.</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">O Fabrício criou nosso cardápio digital em tempo recorde. Sistema de pedidos funcionando no primeiro dia, clientes adoraram a experiência. Recomendo demais!</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">MC</div>
+        <div>
+          <div class="testimonial-name">Marcos Costa</div>
+          <div class="testimonial-role">Dono — Restaurante Sabor & Arte</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Contratei para gerenciar o Google Ads da minha clínica e em menos de 30 dias já estava recebendo muito mais ligações. Sabe o que está fazendo e explica tudo com clareza.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">PS</div>
+        <div>
+          <div class="testimonial-name">Patrícia Souza</div>
+          <div class="testimonial-role">Dra. — Clínica Vida Plena</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Sistema de agendamento que criou para nossa clínica automatizou tudo que era feito manualmente. Economizamos horas por semana e os pacientes adoram a praticidade.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">RL</div>
+        <div>
+          <div class="testimonial-name">Ricardo Lima</div>
+          <div class="testimonial-role">Gestor — Clínica OdontoMax</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PREÇOS -->
+<section id="precos">
+  <p class="section-label">Investimento</p>
+  <h2 class="section-title">Planos claros,<br>sem surpresa no final</h2>
+  <p class="section-sub">Escolha entre soluções de desenvolvimento ou gestão de tráfego pago — ou combine os dois.</p>
+
+  <div class="pricing-toggle">
+    <span class="toggle-label active" id="lbl-dev" onclick="switchPricing('dev')">Desenvolvimento</span>
+    <div class="toggle-pill" id="pricing-toggle" onclick="switchPricing()">
+      <div class="toggle-knob"></div>
+    </div>
+    <span class="toggle-label" id="lbl-ads" onclick="switchPricing('ads')">Tráfego Pago</span>
+  </div>
+
+  <!-- PAINEL DEV -->
+  <div class="pricing-panel pricing-grid active" id="panel-dev">
+    <div class="pricing-card">
+      <div class="pricing-name">Landing Page</div>
+      <div class="pricing-desc">Ideal para cartão de visitas digital ou lançamento de produto.</div>
+      <div class="pricing-price">R$ 79<span>,99 /único</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Página única de alto impacto</li>
+        <li><span class="feat-check">✓</span> Design responsivo</li>
+        <li><span class="feat-check">✓</span> Formulário de contato/lead</li>
+        <li><span class="feat-check">✓</span> Otimização SEO inicial</li>
+        <li class="off"><span class="feat-x">✕</span> Blog ou CMS</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Landing Page." class="pricing-btn" target="_blank">Comprar agora</a>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Mais popular</div>
+      <div class="pricing-name">Site Institucional</div>
+      <div class="pricing-desc">Para empresas que precisam de uma presença online completa e profissional.</div>
+      <div class="pricing-price">R$ 139<span>,99 /único</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Site com até 5 páginas</li>
+        <li><span class="feat-check">✓</span> Design exclusivo e moderno</li>
+        <li><span class="feat-check">✓</span> Integração com blog (CMS)</li>
+        <li><span class="feat-check">✓</span> SEO otimizado</li>
+        <li><span class="feat-check">✓</span> 3 rodadas de revisão</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Site Institucional." class="pricing-btn featured-btn" target="_blank">Comprar agora</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-name">E-commerce</div>
+      <div class="pricing-desc">Solução robusta para vendas online e gestão de produtos.</div>
+      <div class="pricing-price">R$ 198<span>,99 /único</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Loja virtual completa</li>
+        <li><span class="feat-check">✓</span> Cadastro de produtos ilimitado</li>
+        <li><span class="feat-check">✓</span> Integração com pagamentos</li>
+        <li><span class="feat-check">✓</span> Painel de gestão de pedidos</li>
+        <li><span class="feat-check">✓</span> Suporte prioritário</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano E-commerce." class="pricing-btn" target="_blank">Comprar agora</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-name">Site Custom</div>
+      <div class="pricing-desc">Sua visão, sem limites. Construímos o sistema que você precisa.</div>
+      <div class="pricing-price custom-price">Custom</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Tudo do plano E-commerce</li>
+        <li><span class="feat-check">✓</span> Integrações com APIs complexas</li>
+        <li><span class="feat-check">✓</span> Sistemas e dashboards customizados</li>
+        <li><span class="feat-check">✓</span> Consultoria estratégica</li>
+        <li><span class="feat-check">✓</span> Escalabilidade e performance</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Quero solicitar um orçamento para um projeto custom." class="pricing-btn" target="_blank">Solicitar orçamento</a>
+    </div>
+  </div>
+
+  <!-- PAINEL ADS -->
+  <div class="pricing-panel pricing-grid" id="panel-ads">
+    <div class="pricing-card">
+      <div class="pricing-name">Ads Starter</div>
+      <div class="pricing-desc">Para quem quer começar a anunciar com estrutura e estratégia.</div>
+      <div class="pricing-price">R$ 79<span>,99 /mês</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Gestão de 1 campanha</li>
+        <li><span class="feat-check">✓</span> Google Ads ou Meta Ads</li>
+        <li><span class="feat-check">✓</span> Relatório mensal</li>
+        <li><span class="feat-check">✓</span> Configuração inicial inclusa</li>
+        <li class="off"><span class="feat-x">✕</span> Testes A/B</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Ads Starter." class="pricing-btn" target="_blank">Começar agora</a>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Mais popular</div>
+      <div class="pricing-name">Ads Pro</div>
+      <div class="pricing-desc">Gestão completa para negócios que querem escalar resultados.</div>
+      <div class="pricing-price">R$ 139<span>,99 /mês</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Gestão de até 3 campanhas</li>
+        <li><span class="feat-check">✓</span> Google Ads + Meta Ads</li>
+        <li><span class="feat-check">✓</span> Testes A/B de criativos</li>
+        <li><span class="feat-check">✓</span> Relatório quinzenal</li>
+        <li><span class="feat-check">✓</span> Otimização contínua</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Ads Pro." class="pricing-btn featured-btn" target="_blank">Começar agora</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-name">Ads Scale</div>
+      <div class="pricing-desc">Para empresas com volume alto de anúncios e múltiplos canais.</div>
+      <div class="pricing-price">R$ 198<span>,99 /mês</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Campanhas ilimitadas</li>
+        <li><span class="feat-check">✓</span> Google + Meta + outros canais</li>
+        <li><span class="feat-check">✓</span> Dashboard de resultados</li>
+        <li><span class="feat-check">✓</span> Relatório semanal</li>
+        <li><span class="feat-check">✓</span> Suporte prioritário</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Ads Scale." class="pricing-btn" target="_blank">Começar agora</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-name">Ads + Dev</div>
+      <div class="pricing-desc">Combo completo: site profissional + campanhas que convertem.</div>
+      <div class="pricing-price custom-price">Custom</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Site ou landing page incluso</li>
+        <li><span class="feat-check">✓</span> Gestão de tráfego integrada</li>
+        <li><span class="feat-check">✓</span> Pixel e rastreamento configurados</li>
+        <li><span class="feat-check">✓</span> Estratégia de conversão completa</li>
+        <li><span class="feat-check">✓</span> Preço negociado no pacote</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Quero saber mais sobre o combo Ads + Dev." class="pricing-btn" target="_blank">Solicitar orçamento</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTATO -->
+<section id="contato">
+  <p class="section-label">Vamos conversar</p>
+  <h2 class="section-title">Tem um projeto<br>em mente?</h2>
+  <p class="section-sub">Me conta o que precisa. Respondo em até 24h pelo canal que preferir.</p>
+
+  <div class="contact-links" style="margin-top:2rem;justify-content:flex-start;">
+    <a href="https://wa.me/5519981577861" class="contact-link" target="_blank">
+      <span class="icon">💬</span> WhatsApp
+    </a>
+    <a href="javascript:void(0)" onclick="window.location='mai'+'lto:'+'fhdigital.com.br'+'@'+'gmail.com'" class="contact-link">
+      <span class="icon">✉️</span> fhdigital.com.br@gmail.com
+    </a>
+    <a href="https://instagram.com/fhdev.oficial" class="contact-link" target="_blank">
+      <span class="icon">📸</span> @fhdev.oficial
+    </a>
+    <a href="https://linkedin.com/in/fabriciohenrique" class="contact-link" target="_blank">
+      <span class="icon">💼</span> LinkedIn
+    </a>
+  </div>
+
+  <div class="form-wrapper">
+    <div id="form-wrapper-inner">
+      <div style="margin-bottom:2rem;">
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.4rem;">Ou me manda uma mensagem direto aqui</h3>
+        <p style="font-size:0.88rem;color:var(--muted);font-weight:300;">Preencha o formulário e eu entro em contato rapidinho.</p>
+      </div>
+
+      <div id="form-status"></div>
+
+      <form id="fhForm" onsubmit="enviarFormulario(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Seu nome *</label>
+            <input type="text" id="f-nome" placeholder="João Silva" required />
+          </div>
+          <div class="form-group">
+            <label>Seu e-mail *</label>
+            <input type="email" id="f-email" placeholder="joao@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label>WhatsApp</label>
+            <input type="tel" id="f-whats" placeholder="(19) 99999-9999" />
+          </div>
+          <div class="form-group">
+            <label>Tipo de serviço *</label>
+            <select id="f-servico" required>
+              <option value="">Selecione...</option>
+              <option>Google Ads</option>
+              <option>Site / Landing Page</option>
+              <option>Sistema para Clínica</option>
+              <option>Aplicativo</option>
+              <option>Cardápio Digital</option>
+              <option>Automação / Integração</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Mensagem *</label>
+            <textarea id="f-msg" placeholder="Me conta um pouco sobre seu projeto, o que precisa e qual o prazo ideal..." required></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <span class="form-note">* campos obrigatórios — respondo em até 24h</span>
+          <button type="submit" class="btn-primary" id="btn-enviar">Enviar mensagem →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Fabrício Henrique — fhdev.com.br. Todos os direitos reservados.</p>
+  <div style="display:flex;gap:12px;align-items:center;">
+    <a href="https://instagram.com/fhdevoficial" target="_blank" class="social-btn" title="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
+    <a href="https://www.linkedin.com/in/fabricio-henrique-alves-de-souza-947458287/" target="_blank" class="social-btn" title="LinkedIn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/programadorfabricio" target="_blank" class="social-btn" title="GitHub">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+      GitHub
+    </a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+let currentMode = 'dev';
+function switchPricing(force) {
+  const next = force || (currentMode === 'dev' ? 'ads' : 'dev');
+  currentMode = next;
+  document.getElementById('panel-dev').classList.toggle('active', next === 'dev');
+  document.getElementById('panel-ads').classList.toggle('active', next === 'ads');
+  document.getElementById('pricing-toggle').classList.toggle('ads-mode', next === 'ads');
+  document.getElementById('lbl-dev').classList.toggle('active', next === 'dev');
+  document.getElementById('lbl-ads').classList.toggle('active', next === 'ads');
+}
+
+function enviarFormulario(event) {
+  event.preventDefault();
+
+  const nome    = document.getElementById('f-nome').value;
+  const email   = document.getElementById('f-email').value;
+  const whats   = document.getElementById('f-whats').value;
+  const servico = document.getElementById('f-servico').value;
+  const msg     = document.getElementById('f-msg').value;
+  const btn     = document.getElementById('btn-enviar');
+
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  const params = new URLSearchParams({ nome, email, whatsapp: whats || 'Não informado', servico, mensagem: msg });
+  fetch('https://script.google.com/macros/s/AKfycbzJFL937FzK-0e8rJW9L0QJaxXaKUVL5Ig-qtXZWZP4aCbJT5kKyagUAjTAntCMdYqWvA/exec?' + params.toString(), {
+    method: 'GET',
+    mode: 'no-cors'
+  })
+  .then(() => {
+    document.getElementById('form-wrapper-inner').innerHTML = `
+      <div style="text-align:center;padding:48px 20px;">
+        <div style="font-size:3rem;margin-bottom:16px;">✅</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:700;margin-bottom:10px;color:#f0eefc;">Mensagem enviada, ${nome}!</h3>
+        <p style="color:#8b8a9b;line-height:1.7;margin-bottom:24px;">Recebi tudo certinho. Entrarei em contato em até <strong style="color:#f0eefc;">24 horas</strong>.<br>Verifique também seu e-mail — enviei uma confirmação!</p>
+        <a href="https://wa.me/5519981577861" target="_blank" style="display:inline-block;background:#25d366;color:#fff;padding:12px 28px;border-radius:100px;text-decoration:none;font-weight:600;font-size:0.9rem;">Falar pelo WhatsApp</a>
+      </div>
+    `;
+  })
+  .catch(err => {
+    alert('Erro ao enviar: ' + err);
+    btn.textContent = 'Enviar mensagem →';
+    btn.disabled = false;
+  });
+}
+
+function novoContato() {}
+</script>
+</body>
+</html>
