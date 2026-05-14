@@ -338,6 +338,7 @@ footer p { font-size: 0.8rem; color: var(--muted2); }
   nav { padding: 1rem 1.2rem; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
+  .nav-cta { display: none; }
   .hero { padding: 5rem 1.2rem 3rem; min-height: auto; }
   .hero-stats { gap: 2rem; }
   section { padding: 4rem 1.2rem; }
