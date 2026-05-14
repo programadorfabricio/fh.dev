@@ -1,15 +1,10 @@
 // NAV MOBILE
-const hamburger = document.getElementById("nav-hamburger");
-const mobileMenu = document.getElementById("nav-mobile");
+const hamburger = document.getElementById('nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile');
 if (hamburger && mobileMenu) {
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-  });
-  // Fecha o menu ao clicar em um link
-  mobileMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-    });
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    window.scrollTo({top: 0, behavior: 'smooth'});
   });
 }
 
