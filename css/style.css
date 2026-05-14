@@ -338,7 +338,7 @@ footer p { font-size: 0.8rem; color: var(--muted2); }
   nav { padding: 1rem 1.2rem; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
-  .hero { padding: 6rem 1.2rem 4rem; }
+  .hero { padding: 5rem 1.2rem 3rem; min-height: auto; }
   .hero-stats { gap: 2rem; }
   section { padding: 4rem 1.2rem; }
   .form-grid { grid-template-columns: 1fr; }
