@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Artes FH Digital — Serviços</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #1a1a2e; font-family: 'Segoe UI', sans-serif; padding: 40px 20px; }
+h1 { color: #fff; text-align: center; margin-bottom: 10px; font-size: 1.4rem; }
+p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9rem; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 500px); gap: 20px; justify-content: center; }
+
+.arte {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.arte-1 { background: linear-gradient(135deg, #0a0a14 0%, #111827 100%); }
+.arte-2 { background: linear-gradient(135deg, #0d0a14 0%, #1a0a27 100%); }
+.arte-3 { background: linear-gradient(135deg, #0a0d14 0%, #0a1a27 100%); }
+.arte-4 { background: linear-gradient(135deg, #140a0a 0%, #271111 100%); }
+.arte-5 { background: linear-gradient(135deg, #0a140a 0%, #0a2711 100%); }
+.arte-6 { background: linear-gradient(135deg, #14100a 0%, #271e0a 100%); }
+
+.arte-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.arte-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.15;
+  top: -80px;
+  right: -80px;
+}
+.arte-1 .arte-glow { background: radial-gradient(circle, #6c63ff, transparent); }
+.arte-2 .arte-glow { background: radial-gradient(circle, #a855f7, transparent); }
+.arte-3 .arte-glow { background: radial-gradient(circle, #3b82f6, transparent); }
+.arte-4 .arte-glow { background: radial-gradient(circle, #ef4444, transparent); }
+.arte-5 .arte-glow { background: radial-gradient(circle, #22d3a0, transparent); }
+.arte-6 .arte-glow { background: radial-gradient(circle, #f59e0b, transparent); }
+
+.arte-icon { font-size: 64px; margin-bottom: 20px; }
+
+.arte-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+.arte-1 .arte-tag { background: rgba(108,99,255,0.2); color: #a78bfa; border: 1px solid rgba(108,99,255,0.3); }
+.arte-2 .arte-tag { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.3); }
+.arte-3 .arte-tag { background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+.arte-4 .arte-tag { background: rgba(239,68,68,0.2); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
+.arte-5 .arte-tag { background: rgba(34,211,160,0.2); color: #6ee7b7; border: 1px solid rgba(34,211,160,0.3); }
+.arte-6 .arte-tag { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
+
+.arte-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.arte-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 360px;
+}
+
+.arte-promo {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.arte-price {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.arte-1 .arte-price { color: #a78bfa; }
+.arte-2 .arte-price { color: #d8b4fe; }
+.arte-3 .arte-price { color: #93c5fd; }
+.arte-4 .arte-price { color: #fca5a5; }
+.arte-5 .arte-price { color: #6ee7b7; }
+.arte-6 .arte-price { color: #fcd34d; }
+
+.arte-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+}
+
+.arte-brand {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 3px;
+}
+
+.arte-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+.arte-1 .arte-line { background: linear-gradient(90deg, #6c63ff, #a78bfa); }
+.arte-2 .arte-line { background: linear-gradient(90deg, #a855f7, #d8b4fe); }
+.arte-3 .arte-line { background: linear-gradient(90deg, #3b82f6, #93c5fd); }
+.arte-4 .arte-line { background: linear-gradient(90deg, #ef4444, #fca5a5); }
+.arte-5 .arte-line { background: linear-gradient(90deg, #22d3a0, #6ee7b7); }
+.arte-6 .arte-line { background: linear-gradient(90deg, #f59e0b, #fcd34d); }
+
+.instrucao {
+  background: rgba(108,99,255,0.1);
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 12px;
+  padding: 16px;
+  color: #a78bfa;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 1560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+<h1>🎨 Artes FH Digital — Google Meu Negócio</h1>
+<p class="sub">Clique com o botão direito em cada arte → "Salvar imagem como" para baixar</p>
+
+<div class="instrucao">
+  💡 <strong>Como salvar:</strong> Botão direito em cada arte → "Salvar imagem como" → PNG<br>
+  Suba cada uma no Google Meu Negócio em <strong>Produtos</strong>
+</div>
+
+<div class="grid">
+
+  <!-- SITES -->
+  <div class="arte arte-1">
+    <div class="arte-glow"></div>
+    <div class="arte-inner">
+      <div class="arte-tag">Desenvolvimento</div>
+      <div class="arte-icon">🌐</div>
+      <div class="arte-title">Criação de Sites Profissionais</div>
+      <div class="arte-desc">Sites rápidos, modernos e otimizados para o Google. Para pequenas empresas, autônomos e lojas físicas.</div>
+      <div class="arte-price">A partir de R$ 497</div>
+      <div class="arte-badge">Pagamento único</div>
+    </div>
+    <div class="arte-brand">FH DIGITAL</div>
+    <div class="arte-line"></div>
+  </div>
+
+  <!-- LANDING PAGE -->
+  <div class="arte arte-2">
+    <div class="arte-glow"></div>
+    <div class="arte-inner">
+      <div class="arte-tag">Conversão</div>
+      <div class="arte-icon">🎯</div>
+      <div class="arte-title">Landing Pages de Alta Conversão</div>
+      <div class="arte-desc">Páginas focadas em converter visitantes em clientes. Ideal para campanhas e lançamentos.</div>
+      <div class="arte-price">A partir de R$ 297</div>
+      <div class="arte-badge">Pagamento único</div>
+    </div>
+    <div class="arte-brand">FH DIGITAL</div>
+    <div class="arte-line"></div>
+  </div>
+
+  <!-- GOOGLE ADS -->
+  <div class="arte arte-3">
+    <div class="arte-glow"></div>
+    <div class="arte-inner">
+      <div class="arte-tag">Tráfego Pago</div>
+      <div class="arte-icon">📣</div>
+      <div class="arte-title">Gestão de Google Ads</div>
+      <div class="arte-desc">Apareça no topo do Google quando seu cliente pesquisar. Campanhas otimizadas para resultado real.</div>
+      <div class="arte-price">A partir de R$ 297/mês</div>
+      <div class="arte-badge">Gestão profissional</div>
+    </div>
+    <div class="arte-brand">FH DIGITAL</div>
+    <div class="arte-line"></div>
+  </div>
+
+  <!-- META ADS -->
+  <div class="arte arte-4">
+    <div class="arte-glow"></div>
+    <div class="arte-inner">
+      <div class="arte-tag">Tráfego Pago</div>
+      <div class="arte-icon">📱</div>
+      <div class="arte-title">Gestão de Meta Ads</div>
+      <div class="arte-desc">Anúncios no Instagram e Facebook segmentados para o seu público ideal. Clientes todos os dias.</div>
+      <div class="arte-price">A partir de R$ 297/mês</div>
+      <div class="arte-badge">Gestão profissional</div>
+    </div>
+    <div class="arte-brand">FH DIGITAL</div>
+    <div class="arte-line"></div>
+  </div>
+
+  <!-- SISTEMAS -->
+  <div class="arte arte-5">
+    <div class="arte-glow"></div>
+    <div class="arte-inner">
+      <div class="arte-tag">Sistema Web</div>
+      <div class="arte-icon">🏥</div>
+      <div class="arte-title">Sistemas Web Personalizados</div>
+      <div class="arte-desc">Agendamentos, prontuários e dashboards sob medida para clínicas, consultórios e empresas.</div>
+      <div class="arte-price">Sob consulta</div>
+      <div class="arte-badge">100% personalizado</div>
+    </div>
+    <div class="arte-brand">FH DIGITAL</div>
+    <div class="arte-line"></div>
+  </div>
+
+  <!-- CARDAPIO -->
+  <div class="arte arte-6">
+    <div class="arte-glow"></div>
+    <div class="arte-inner">
+      <div class="arte-tag">E-commerce</div>
+      <div class="arte-icon">🍔</div>
+      <div class="arte-title">Cardápio Digital</div>
+      <div class="arte-desc">Cardápio online com carrinho e pedidos em tempo real. Sem mensalidade, sem taxa por pedido.</div>
+      <div class="arte-price">A partir de R$ 497</div>
+      <div class="arte-badge">Pagamento único</div>
+    </div>
+    <div class="arte-brand">FH DIGITAL</div>
+    <div class="arte-line"></div>
+  </div>
+
+</div>
+</body>
+</html>
