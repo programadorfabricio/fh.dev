@@ -334,6 +334,13 @@ footer p { font-size: 0.8rem; color: var(--muted2); }
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
   .about-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
 }
+.nav-mobile {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
 @media (max-width: 768px) {
   nav { padding: 1rem 1.2rem; }
   .nav-links { display: none; }
