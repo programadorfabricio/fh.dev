@@ -1132,12 +1132,13 @@ footer p {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   z-index: 999;
 }
 .btn-whatsapp img {
-  width: 100%;
+  width: 56px;
+  height: 56px;
 }
 
 /* RESPONSIVE */
