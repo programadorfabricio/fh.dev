@@ -679,8 +679,11 @@ section {
   line-height: 1.4;
 }
 .pricing-features li.off {
-  opacity: 0.4;
-  text-decoration: line-through;
+  .pricing-features li.off {
+    opacity: 0.6;
+    text-decoration: line-through;
+    color: var(--muted);
+  }
 }
 .feat-check {
   color: var(--green);
