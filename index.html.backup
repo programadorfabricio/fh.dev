@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criação de Sites e Marketing Digital para Pequenas Empresas | FH Digital</title>
+<meta name="description" content="FH Digital — criação de sites, landing pages, sistemas e gestão de tráfego pago para pequenas empresas, autônomos e lojas físicas em todo o Brasil. Atendimento direto, resultado real.">
+<meta name="keywords" content="criação de site para pequena empresa, marketing digital para autônomo, landing page, Google Ads, Meta Ads, tráfego pago, FH Digital">
+<meta name="author" content="Fabrício Henrique">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fhdigitalmarketing.com/">
+<link rel="icon" type="image/png" href="imagens/favicon.png">
+
+<meta property="og:title" content="Criação de Sites e Marketing Digital | FH Digital">
+<meta property="og:description" content="Sites, landing pages e tráfego pago para pequenas empresas em todo o Brasil.">
+<meta property="og:url" content="https://fhdigitalmarketing.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Criação de Sites e Marketing Digital | FH Digital">
+<meta name="twitter:description" content="Sites, landing pages e tráfego pago para pequenas empresas em todo o Brasil.">
+
+<!-- ✅ FIX 1: Schema atualizado para Paulínia -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "FH Digital",
+  "url": "https://fhdigitalmarketing.com",
+  "description": "Criação de sites, landing pages, sistemas e gestão de tráfego pago para pequenas empresas, autônomos e lojas físicas em todo o Brasil.",
+  "telephone": "+55-19-98157-7861",
+  "email": "fhdigital.com.br@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Paulínia", "addressRegion": "SP", "addressCountry": "BR" },
+  "areaServed": "BR",
+  "priceRange": "R$79 - R$499",
+  "sameAs": ["https://www.instagram.com/fhdevoficial","https://www.linkedin.com/in/fabriciohenriquefh","https://github.com/programadorfabricio"]
+}
+</script>
+
+<!-- ✅ FIX 2: Preload da fonte principal para reduzir LCP -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+</noscript>
+
+<!-- ✅ FIX 3: CSS próprio carrega normalmente (crítico) -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- ✅ FIX 4: JS com defer — não bloqueia mais a renderização -->
+<script src="js/main.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="logo-name">
+      <span class="logo-name-main">FH Digital</span>
+      <span class="logo-name-sub">Desenvolvimento & Marketing</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/servicos/index.html">Serviços</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="/sobre.html">Sobre</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contato.html">Contato</a></li>
+  </ul>
+  <div id="nav-hamburger" class="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+  <a href="https://wa.me/5519981577861" class="nav-cta" target="_blank">Falar comigo</a>
+</nav>
+<div id="nav-mobile" class="nav-mobile">
+  <a href="/servicos/index.html">Serviços</a>
+  <a href="/#precos">Preços</a>
+  <a href="/sobre.html">Sobre</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contato.html">Contato</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      Disponível para novos projetos
+    </div>
+    <h1>Criação de sites e <em>marketing digital</em> que geram resultado.</h1>
+    <p class="hero-sub">
+      FH Digital — soluções completas para pequenas empresas, autônomos e lojas físicas em todo o Brasil. Sites, landing pages, sistemas e tráfego pago com atendimento direto e sem enrolação.
+    </p>
+    <div class="hero-actions">
+      <a href="/servicos/index.html" class="btn-primary">Ver serviços</a>
+      <a href="https://wa.me/5519981577861" class="btn-ghost" target="_blank">Falar pelo WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">5<span>★</span></div>
+        <div class="stat-label">Avaliação no Google</div>
+      </div>
+      <div>
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Comprometimento</div>
+      </div>
+      <div>
+        <div class="stat-num">1<span>×1</span></div>
+        <div class="stat-label">Atendimento direto</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TECH STRIP -->
+<div class="tech-section">
+  <div class="tech-inner">
+    <p class="tech-label">Tecnologias & ferramentas</p>
+    <div class="tech-list">
+      <span class="tech-item">Google Ads</span>
+      <span class="tech-item">Meta Ads</span>
+      <span class="tech-item">React</span>
+      <span class="tech-item">Node.js</span>
+      <span class="tech-item">Google Sheets API</span>
+      <span class="tech-item">Firebase</span>
+      <span class="tech-item">HTML / CSS / JS</span>
+      <span class="tech-item">WordPress</span>
+      <span class="tech-item">MySQL</span>
+      <span class="tech-item">PHP</span>
+      <span class="tech-item">Figma</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <p class="section-label">O que fazemos</p>
+  <h2 class="section-title">Soluções sob medida<br>para o seu negócio</h2>
+  <p class="section-sub">Do anúncio ao sistema, entregamos o que precisa funcionar — para pequenas empresas, autônomos e lojas físicas em todo o Brasil.</p>
+  <div class="services-grid">
+    <a href="/servicos/google-ads.html" class="service-card">
+      <div class="service-icon">📣</div>
+      <h3>Google Ads</h3>
+      <p>Campanhas no Google para atrair clientes que já procuram o que você vende. Foco em conversão e retorno real.</p>
+      <span class="service-tag">Tráfego Pago</span>
+      <span class="service-arrow">Saiba mais →</span>
+    </a>
+    <a href="/servicos/sites.html" class="service-card">
+      <div class="service-icon">🌐</div>
+      <h3>Criação de Sites</h3>
+      <p>Sites rápidos, modernos e otimizados para pequenas empresas, autônomos e lojas físicas que querem presença digital de verdade.</p>
+      <span class="service-tag">Desenvolvimento</span>
+      <span class="service-arrow">Saiba mais →</span>
+    </a>
+    <a href="/servicos/landing-page.html" class="service-card">
+      <div class="service-icon">🎯</div>
+      <h3>Landing Pages</h3>
+      <p>Páginas de alta conversão para capturar leads, lançar produtos ou divulgar serviços. Design focado em resultado.</p>
+      <span class="service-tag">Conversão</span>
+      <span class="service-arrow">Saiba mais →</span>
+    </a>
+    <a href="/servicos/meta-ads.html" class="service-card">
+      <div class="service-icon">📱</div>
+      <h3>Meta Ads</h3>
+      <p>Anúncios no Instagram e Facebook para alcançar seu público ideal e gerar vendas e contatos todos os dias.</p>
+      <span class="service-tag">Tráfego Pago</span>
+      <span class="service-arrow">Saiba mais →</span>
+    </a>
+    <a href="/servicos/sistemas.html" class="service-card">
+      <div class="service-icon">🏥</div>
+      <h3>Sistemas Web</h3>
+      <p>Sistemas de agendamento, cardápios digitais, dashboards e automações personalizadas para o seu negócio.</p>
+      <span class="service-tag">Sistema Web</span>
+      <span class="service-arrow">Saiba mais →</span>
+    </a>
+    <a href="/servicos/cardapio-digital.html" class="service-card">
+      <div class="service-icon">🍔</div>
+      <h3>Cardápio Digital</h3>
+      <p>Cardápio online com carrinho, pedidos em tempo real e filtros por categoria. Perfeito para restaurantes e deliveries.</p>
+      <span class="service-tag">E-commerce</span>
+      <span class="service-arrow">Saiba mais →</span>
+    </a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <p class="section-label">O que dizem</p>
+  <h2 class="section-title">Clientes que<br>confiam no trabalho</h2>
+  <p class="section-sub">Resultados reais de quem já trabalhou com a FH Digital em todo o Brasil.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Fabrício criou nosso cardápio digital em tempo recorde. Sistema de pedidos funcionando no primeiro dia, clientes adoraram a experiência. Recomendo demais!</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">MC</div>
+        <div>
+          <div class="testimonial-name">Marcos Costa</div>
+          <div class="testimonial-role">Dono — Restaurante Sabor & Arte</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Contratei para gerenciar o Google Ads da minha clínica e em menos de 30 dias já estava recebendo muito mais ligações. Sabe o que está fazendo e explica tudo com clareza.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">PS</div>
+        <div>
+          <div class="testimonial-name">Patrícia Souza</div>
+          <div class="testimonial-role">Dra. — Clínica Vida Plena</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Serviço excelente, atendimento rápido e profissional. Meu site ficou moderno e bem organizado, e já comecei a receber mais contatos. Recomendo muito.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">RL</div>
+        <div>
+          <div class="testimonial-name">Ricardo Lima</div>
+          <div class="testimonial-role">Gestor — Clínica OdontoMax</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PREÇOS -->
+<section id="precos">
+  <p class="section-label">Investimento</p>
+  <h2 class="section-title">Planos claros,<br>sem surpresa no final</h2>
+  <p class="section-sub">Preços acessíveis para pequenas empresas e autônomos. Desenvolvimento ou tráfego pago — ou os dois juntos.</p>
+  <div class="pricing-toggle">
+    <span class="toggle-label active" id="lbl-dev" onclick="switchPricing('dev')">Desenvolvimento</span>
+    <div class="toggle-pill" id="pricing-toggle" onclick="switchPricing()"><div class="toggle-knob"></div></div>
+    <span class="toggle-label" id="lbl-ads" onclick="switchPricing('ads')">Tráfego Pago</span>
+  </div>
+  <div class="pricing-panel pricing-grid active" id="panel-dev">
+    <div class="pricing-card">
+      <div class="pricing-name">Landing Page</div>
+      <div class="pricing-desc">Ideal para cartão de visitas digital ou lançamento de produto.</div>
+      <div class="pricing-price">R$ 79<span>,99 /único</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Página única de alto impacto</li>
+        <li><span class="feat-check">✓</span> Design responsivo</li>
+        <li><span class="feat-check">✓</span> Formulário de contato/lead</li>
+        <li><span class="feat-check">✓</span> Otimização SEO inicial</li>
+        <li class="off"><span class="feat-x">✕</span> Blog ou CMS</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Landing Page." class="pricing-btn" target="_blank">Comprar agora</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Mais popular</div>
+      <div class="pricing-name">Site Institucional</div>
+      <div class="pricing-desc">Presença online completa para sua empresa ou negócio.</div>
+      <div class="pricing-price">R$ 139<span>,99 /único</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Site com até 5 páginas</li>
+        <li><span class="feat-check">✓</span> Design exclusivo e moderno</li>
+        <li><span class="feat-check">✓</span> Integração com blog (CMS)</li>
+        <li><span class="feat-check">✓</span> SEO otimizado</li>
+        <li><span class="feat-check">✓</span> 3 rodadas de revisão</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Site Institucional." class="pricing-btn featured-btn" target="_blank">Comprar agora</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-name">E-commerce</div>
+      <div class="pricing-desc">Loja virtual completa para vender online.</div>
+      <div class="pricing-price">R$ 198<span>,99 /único</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Loja virtual completa</li>
+        <li><span class="feat-check">✓</span> Produtos ilimitados</li>
+        <li><span class="feat-check">✓</span> Integração com pagamentos</li>
+        <li><span class="feat-check">✓</span> Painel de gestão de pedidos</li>
+        <li><span class="feat-check">✓</span> Suporte prioritário</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano E-commerce." class="pricing-btn" target="_blank">Comprar agora</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-name">Custom</div>
+      <div class="pricing-desc">Sistemas, dashboards e soluções sob medida.</div>
+      <div class="pricing-price custom-price">Sob consulta</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Tudo do plano E-commerce</li>
+        <li><span class="feat-check">✓</span> APIs e integrações complexas</li>
+        <li><span class="feat-check">✓</span> Sistemas e dashboards</li>
+        <li><span class="feat-check">✓</span> Consultoria estratégica</li>
+        <li><span class="feat-check">✓</span> Escalabilidade e performance</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Quero solicitar um orçamento para um projeto custom." class="pricing-btn" target="_blank">Solicitar orçamento</a>
+    </div>
+  </div>
+  <div class="pricing-panel pricing-grid" id="panel-ads">
+    <div class="pricing-card">
+      <div class="pricing-name">Ads Starter</div>
+      <div class="pricing-desc">Para começar a anunciar com estrutura e estratégia.</div>
+      <div class="pricing-price">R$ 79<span>,99 /mês</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Gestão de 1 campanha</li>
+        <li><span class="feat-check">✓</span> Google Ads ou Meta Ads</li>
+        <li><span class="feat-check">✓</span> Relatório mensal</li>
+        <li><span class="feat-check">✓</span> Configuração inicial inclusa</li>
+        <li class="off"><span class="feat-x">✕</span> Testes A/B</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Ads Starter." class="pricing-btn" target="_blank">Começar agora</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Mais popular</div>
+      <div class="pricing-name">Ads Pro</div>
+      <div class="pricing-desc">Gestão completa para escalar resultados.</div>
+      <div class="pricing-price">R$ 139<span>,99 /mês</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Até 3 campanhas</li>
+        <li><span class="feat-check">✓</span> Google Ads + Meta Ads</li>
+        <li><span class="feat-check">✓</span> Testes A/B de criativos</li>
+        <li><span class="feat-check">✓</span> Relatório quinzenal</li>
+        <li><span class="feat-check">✓</span> Otimização contínua</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Ads Pro." class="pricing-btn featured-btn" target="_blank">Começar agora</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-name">Ads Scale</div>
+      <div class="pricing-desc">Para negócios com alto volume de anúncios.</div>
+      <div class="pricing-price">R$ 198<span>,99 /mês</span></div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Campanhas ilimitadas</li>
+        <li><span class="feat-check">✓</span> Google + Meta + outros canais</li>
+        <li><span class="feat-check">✓</span> Dashboard de resultados</li>
+        <li><span class="feat-check">✓</span> Relatório semanal</li>
+        <li><span class="feat-check">✓</span> Suporte prioritário</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Tenho interesse no plano Ads Scale." class="pricing-btn" target="_blank">Começar agora</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-name">Ads + Dev</div>
+      <div class="pricing-desc">Site profissional + campanhas que convertem.</div>
+      <div class="pricing-price custom-price">Sob consulta</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Site ou landing page incluso</li>
+        <li><span class="feat-check">✓</span> Gestão de tráfego integrada</li>
+        <li><span class="feat-check">✓</span> Pixel e rastreamento</li>
+        <li><span class="feat-check">✓</span> Estratégia de conversão</li>
+        <li><span class="feat-check">✓</span> Preço negociado no pacote</li>
+      </ul>
+      <a href="https://wa.me/5519981577861?text=Olá! Quero saber mais sobre o combo Ads + Dev." class="pricing-btn" target="_blank">Solicitar orçamento</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<!-- ✅ FIX 5: Paulínia no lugar de Sumaré -->
+<section id="faq">
+  <p class="section-label">Dúvidas frequentes</p>
+  <h2 class="section-title">Perguntas<br>frequentes</h2>
+  <p class="section-sub">Tudo que você precisa saber antes de contratar.</p>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Vocês atendem em todo o Brasil? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Sim! Atendemos clientes em todo o Brasil de forma 100% online. Se necessário, também fazemos atendimento presencial na região de Paulínia e Campinas/SP.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Quanto tempo leva para criar um site? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Uma landing page fica pronta em até 5 dias úteis. Um site institucional completo leva entre 7 e 15 dias, dependendo do conteúdo e revisões.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Vocês trabalham com pequenas empresas e autônomos? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Esse é nosso foco principal! Desenvolvemos soluções com preço justo e atendimento personalizado para pequenas empresas, autônomos, profissionais liberais e lojas físicas que querem crescer no digital.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">O site fica otimizado para aparecer no Google? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Sim. Todos os sites já saem com SEO básico configurado: títulos, meta descriptions, estrutura de headings, velocidade e responsividade mobile — fatores essenciais para ranquear no Google.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Posso contratar só o tráfego pago sem o site? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Sim! Gerenciamos campanhas no Google Ads e Meta Ads independente. Mas se precisar de uma landing page para as campanhas, podemos fazer o combo com desconto.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="cidades">
+  <p class="section-label">Atendimento nacional</p>
+  <h2 class="section-title">Atendemos todo o Brasil</h2>
+  <p class="section-sub">100% online, com entrega rápida para qualquer cidade do país. Confira algumas das principais cidades que atendemos:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:2.5rem;">
+    <a href="/cidades/sao-paulo.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 São Paulo</a>
+    <a href="/cidades/rio-de-janeiro.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Rio de Janeiro</a>
+    <a href="/cidades/belo-horizonte.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Belo Horizonte</a>
+    <a href="/cidades/campinas.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Campinas</a>
+    <a href="/cidades/curitiba.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Curitiba</a>
+    <a href="/cidades/porto-alegre.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Porto Alegre</a>
+    <a href="/cidades/fortaleza.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Fortaleza</a>
+    <a href="/cidades/salvador.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Salvador</a>
+    <a href="/cidades/brasilia.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Brasília</a>
+    <a href="/cidades/goiania.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Goiânia</a>
+    <!-- ✅ Paulínia adicionada na lista de cidades -->
+    <a href="/cidades/paulinia.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Paulínia</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 FH Digital — fhdigitalmarketing.com. Todos os direitos reservados.</p>
+  <div class="footer-links">
+    <a href="https://instagram.com/fhdevoficial" target="_blank" class="social-btn">Instagram</a>
+    <a href="https://www.linkedin.com/in/fabriciohenriquefh/" target="_blank" class="social-btn">LinkedIn</a>
+    <a href="https://github.com/programadorfabricio" target="_blank" class="social-btn">GitHub</a>
+  </div>
+</footer>
+
+<!-- ✅ FIX 6: Imagem WhatsApp com width e height explícitos -->
+<a href="https://api.whatsapp.com/send/?phone=5519981577861" class="btn-whatsapp" target="_blank">
+  <img src="imagens/whatsapp.png" alt="Falar pelo WhatsApp" width="56" height="56" loading="lazy">
+</a>
+
+<!-- ✅ FIX 7: Google Analytics movido para o fim do body — não bloqueia mais o LCP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-70XKXZ8JML"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-70XKXZ8JML');</script>
+
+</body>
+</html>
