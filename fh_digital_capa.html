@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 608px;
+    overflow: hidden;
+    background: #0a0a14;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .canvas {
+    width: 1080px;
+    height: 608px;
+    background: linear-gradient(135deg, #0a0a14 0%, #0f1220 60%, #0d1a18 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Decorative blobs */
+  .blob1 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,92,232,0.18) 0%, transparent 70%);
+    top: -100px;
+    right: 100px;
+  }
+  .blob2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,207,164,0.14) 0%, transparent 70%);
+    bottom: -60px;
+    right: 300px;
+  }
+  .blob3 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,92,232,0.1) 0%, transparent 70%);
+    bottom: -40px;
+    left: 60px;
+  }
+
+  /* Grid lines decorative */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(124,92,232,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,92,232,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Left content */
+  .left {
+    position: relative;
+    z-index: 2;
+    padding-left: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  svg.hex-icon {
+    width: 80px;
+    height: 92px;
+    flex-shrink: 0;
+  }
+
+  .brand-text .fh {
+    font-size: 72px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -2px;
+    font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
+  }
+
+  .brand-text .digital {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    background: linear-gradient(90deg, #7c5ce8, #1dcfa4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #7c5ce8, #1dcfa4);
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+
+  .slogan-line1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.4;
+  }
+  .slogan-line2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1dcfa4;
+    line-height: 1.4;
+  }
+
+  .tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .tag-purple {
+    background: rgba(124,92,232,0.2);
+    color: #c4b5fd;
+    border: 1px solid rgba(124,92,232,0.3);
+  }
+  .tag-teal {
+    background: rgba(29,207,164,0.15);
+    color: #5eead4;
+    border: 1px solid rgba(29,207,164,0.25);
+  }
+
+  /* Right side: big hex decoration */
+  .right-deco {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.12;
+  }
+
+  /* Bottom accent bar */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #7c5ce8, #1dcfa4, #7c5ce8);
+  }
+
+  /* Corner accent */
+  .corner-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 80px;
+    background: linear-gradient(180deg, #7c5ce8, transparent);
+  }
+  .corner-tl2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #7c5ce8, transparent);
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="grid"></div>
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+  <div class="blob3"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-tl2"></div>
+
+  <div class="left">
+    <div class="logo-row">
+      <svg class="hex-icon" viewBox="0 0 80 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="0" y2="92" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#7c5ce8"/>
+            <stop offset="100%" stop-color="#1dcfa4"/>
+          </linearGradient>
+        </defs>
+        <polygon points="40,2 78,23 78,69 40,90 2,69 2,23" fill="url(#hg)" opacity="0.9"/>
+        <polygon points="40,2 78,23 78,69 40,90 2,69 2,23" fill="none" stroke="#1dcfa4" stroke-width="1.5" opacity="0.5"/>
+        <circle cx="40" cy="46" r="12" fill="white" opacity="0.15"/>
+      </svg>
+      <div class="brand-text">
+        <div class="fh">FH</div>
+        <div class="digital">DIGITAL</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="slogan-line1">Seu negócio merece estar</div>
+    <div class="slogan-line2">no digital de verdade.</div>
+
+    <div class="tags">
+      <span class="tag tag-purple">Sites</span>
+      <span class="tag tag-purple">Landing Pages</span>
+      <span class="tag tag-purple">Sistemas</span>
+      <span class="tag tag-teal">Tráfego Pago</span>
+      <span class="tag tag-teal">Marketing Digital</span>
+    </div>
+  </div>
+
+  <!-- Big decorative hex right side -->
+  <div class="right-deco">
+    <svg width="500" height="580" viewBox="0 0 500 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="580" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#7c5ce8"/>
+          <stop offset="100%" stop-color="#1dcfa4"/>
+        </linearGradient>
+      </defs>
+      <polygon points="250,10 490,145 490,435 250,570 10,435 10,145" fill="url(#hg2)"/>
+    </svg>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+</body>
+</html>

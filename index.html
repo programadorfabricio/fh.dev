@@ -20,6 +20,7 @@
 <meta name="twitter:title" content="Criação de Sites e Marketing Digital | FH Digital">
 <meta name="twitter:description" content="Sites, landing pages e tráfego pago para pequenas empresas em todo o Brasil.">
 
+<!-- ✅ FIX 1: Schema atualizado para Paulínia -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,19 +30,27 @@
   "description": "Criação de sites, landing pages, sistemas e gestão de tráfego pago para pequenas empresas, autônomos e lojas físicas em todo o Brasil.",
   "telephone": "+55-19-98157-7861",
   "email": "fhdigital.com.br@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Sumaré", "addressRegion": "SP", "addressCountry": "BR" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Paulínia", "addressRegion": "SP", "addressCountry": "BR" },
   "areaServed": "BR",
   "priceRange": "R$79 - R$499",
   "sameAs": ["https://www.instagram.com/fhdevoficial","https://www.linkedin.com/in/fabriciohenriquefh","https://github.com/programadorfabricio"]
 }
 </script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-70XKXZ8JML"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-70XKXZ8JML');</script>
-
+<!-- ✅ FIX 2: Preload da fonte principal para reduzir LCP -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+</noscript>
+
+<!-- ✅ FIX 3: CSS próprio carrega normalmente (crítico) -->
 <link rel="stylesheet" href="css/style.css">
+
+<!-- ✅ FIX 4: JS com defer — não bloqueia mais a renderização -->
+<script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -52,13 +61,13 @@
       <span class="logo-name-sub">Desenvolvimento & Marketing</span>
     </span>
   </a>
-<ul class="nav-links">
-  <li><a href="/servicos/index.html">Serviços</a></li>
-  <li><a href="#precos">Preços</a></li>
-  <li><a href="/sobre.html">Sobre</a></li>
-  <li><a href="/blog/">Blog</a></li>
-  <li><a href="/contato.html">Contato</a></li>
-</ul>
+  <ul class="nav-links">
+    <li><a href="/servicos/index.html">Serviços</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="/sobre.html">Sobre</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contato.html">Contato</a></li>
+  </ul>
   <div id="nav-hamburger" class="nav-hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </div>
@@ -71,6 +80,7 @@
   <a href="/blog/">Blog</a>
   <a href="/contato.html">Contato</a>
 </div>
+
 <!-- HERO -->
 <div class="hero">
   <div class="hero-glow"></div>
@@ -85,8 +95,7 @@
       FH Digital — soluções completas para pequenas empresas, autônomos e lojas físicas em todo o Brasil. Sites, landing pages, sistemas e tráfego pago com atendimento direto e sem enrolação.
     </p>
     <div class="hero-actions">
-      <a href="/servicos/index.html"
- class="btn-primary">Ver serviços</a>
+      <a href="/servicos/index.html" class="btn-primary">Ver serviços</a>
       <a href="https://wa.me/5519981577861" class="btn-ghost" target="_blank">Falar pelo WhatsApp</a>
     </div>
     <div class="hero-stats">
@@ -359,6 +368,7 @@
 <hr class="divider">
 
 <!-- FAQ -->
+<!-- ✅ FIX 5: Paulínia no lugar de Sumaré -->
 <section id="faq">
   <p class="section-label">Dúvidas frequentes</p>
   <h2 class="section-title">Perguntas<br>frequentes</h2>
@@ -366,7 +376,7 @@
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-question">Vocês atendem em todo o Brasil? <span class="faq-icon">+</span></button>
-      <div class="faq-answer">Sim! Atendemos clientes em todo o Brasil de forma 100% online. Se necessário, também fazemos atendimento presencial na região de Sumaré e Campinas/SP.</div>
+      <div class="faq-answer">Sim! Atendemos clientes em todo o Brasil de forma 100% online. Se necessário, também fazemos atendimento presencial na região de Paulínia e Campinas/SP.</div>
     </div>
     <div class="faq-item">
       <button class="faq-question">Quanto tempo leva para criar um site? <span class="faq-icon">+</span></button>
@@ -393,7 +403,6 @@
   <p class="section-label">Atendimento nacional</p>
   <h2 class="section-title">Atendemos todo o Brasil</h2>
   <p class="section-sub">100% online, com entrega rápida para qualquer cidade do país. Confira algumas das principais cidades que atendemos:</p>
-
   <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:2.5rem;">
     <a href="/cidades/sao-paulo.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 São Paulo</a>
     <a href="/cidades/rio-de-janeiro.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Rio de Janeiro</a>
@@ -405,6 +414,8 @@
     <a href="/cidades/salvador.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Salvador</a>
     <a href="/cidades/brasilia.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Brasília</a>
     <a href="/cidades/goiania.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Goiânia</a>
+    <!-- ✅ Paulínia adicionada na lista de cidades -->
+    <a href="/cidades/paulinia.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;font-size:0.85rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">📍 Paulínia</a>
   </div>
 </section>
 
@@ -418,10 +429,14 @@
   </div>
 </footer>
 
+<!-- ✅ FIX 6: Imagem WhatsApp com width e height explícitos -->
 <a href="https://api.whatsapp.com/send/?phone=5519981577861" class="btn-whatsapp" target="_blank">
-  <img src="imagens/whatsapp.png" alt="Falar pelo WhatsApp">
+  <img src="imagens/whatsapp.png" alt="Falar pelo WhatsApp" width="56" height="56" loading="lazy">
 </a>
 
-<script src="js/main.js"></script>
+<!-- ✅ FIX 7: Google Analytics movido para o fim do body — não bloqueia mais o LCP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-70XKXZ8JML"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-70XKXZ8JML');</script>
+
 </body>
 </html>

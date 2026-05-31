@@ -7,7 +7,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: #1a1a2e; font-family: 'Segoe UI', sans-serif; padding: 40px 20px; }
 h1 { color: #fff; text-align: center; margin-bottom: 10px; font-size: 1.4rem; }
-p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9rem; }
+p { color: #8b8a9b; text-align: center; margin-bottom: 40px; font-size: 0.9rem; }
 
 .grid { display: grid; grid-template-columns: repeat(3, 500px); gap: 20px; justify-content: center; }
 
@@ -17,8 +17,10 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  cursor: pointer;
 }
 
+/* Arte 1 - Sites */
 .arte-1 { background: linear-gradient(135deg, #0a0a14 0%, #111827 100%); }
 .arte-2 { background: linear-gradient(135deg, #0d0a14 0%, #1a0a27 100%); }
 .arte-3 { background: linear-gradient(135deg, #0a0d14 0%, #0a1a27 100%); }
@@ -54,7 +56,10 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
 .arte-5 .arte-glow { background: radial-gradient(circle, #22d3a0, transparent); }
 .arte-6 .arte-glow { background: radial-gradient(circle, #f59e0b, transparent); }
 
-.arte-icon { font-size: 64px; margin-bottom: 20px; }
+.arte-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+}
 
 .arte-tag {
   font-size: 11px;
@@ -63,7 +68,7 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
   text-transform: uppercase;
   padding: 6px 16px;
   border-radius: 100px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .arte-1 .arte-tag { background: rgba(108,99,255,0.2); color: #a78bfa; border: 1px solid rgba(108,99,255,0.3); }
 .arte-2 .arte-tag { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.3); }
@@ -73,34 +78,27 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
 .arte-6 .arte-tag { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
 
 .arte-title {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
   color: #fff;
   text-align: center;
   line-height: 1.2;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .arte-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(255,255,255,0.6);
   text-align: center;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   max-width: 360px;
 }
 
-.arte-promo {
-  font-size: 13px;
-  color: rgba(255,255,255,0.35);
-  text-decoration: line-through;
-  margin-bottom: 4px;
-}
-
 .arte-price {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 .arte-1 .arte-price { color: #a78bfa; }
 .arte-2 .arte-price { color: #d8b4fe; }
@@ -109,26 +107,16 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
 .arte-5 .arte-price { color: #6ee7b7; }
 .arte-6 .arte-price { color: #fcd34d; }
 
-.arte-badge {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 100px;
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 1px;
-}
-
 .arte-brand {
   position: absolute;
-  bottom: 20px;
+  bottom: 24px;
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  color: rgba(255,255,255,0.25);
-  letter-spacing: 3px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 2px;
 }
 
 .arte-line {
@@ -149,76 +137,70 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
   background: rgba(108,99,255,0.1);
   border: 1px solid rgba(108,99,255,0.3);
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
   color: #a78bfa;
   text-align: center;
   margin-bottom: 30px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.6;
-  max-width: 1560px;
-  margin-left: auto;
-  margin-right: auto;
 }
 </style>
 </head>
 <body>
 
 <h1>🎨 Artes FH Digital — Google Meu Negócio</h1>
-<p class="sub">Clique com o botão direito em cada arte → "Salvar imagem como" para baixar</p>
+<p>Clique com o botão direito em cada arte → "Salvar imagem como" para baixar</p>
 
 <div class="instrucao">
-  💡 <strong>Como salvar:</strong> Botão direito em cada arte → "Salvar imagem como" → PNG<br>
-  Suba cada uma no Google Meu Negócio em <strong>Produtos</strong>
+  💡 <strong>Como salvar:</strong> Clique com o botão direito em cada arte → "Salvar imagem como" → salve como PNG<br>
+  Depois suba cada uma no Google Meu Negócio em <strong>Produtos</strong>
 </div>
 
 <div class="grid">
 
-  <!-- SITES -->
+  <!-- ARTE 1 - SITES -->
   <div class="arte arte-1">
     <div class="arte-glow"></div>
     <div class="arte-inner">
       <div class="arte-tag">Desenvolvimento</div>
       <div class="arte-icon">🌐</div>
       <div class="arte-title">Criação de Sites Profissionais</div>
-      <div class="arte-desc">Sites rápidos, modernos e otimizados para o Google. Para pequenas empresas, autônomos e lojas físicas.</div>
-      <div class="arte-price">A partir de R$ 497</div>
-      <div class="arte-badge">Pagamento único</div>
+      <div class="arte-desc">Sites rápidos, modernos e otimizados para o Google. Ideal para pequenas empresas, autônomos e lojas físicas.</div>
+      <div class="arte-price">A partir de R$ 139</div>
     </div>
     <div class="arte-brand">FH DIGITAL</div>
     <div class="arte-line"></div>
   </div>
 
-  <!-- LANDING PAGE -->
+  <!-- ARTE 2 - LANDING PAGE -->
   <div class="arte arte-2">
     <div class="arte-glow"></div>
     <div class="arte-inner">
       <div class="arte-tag">Conversão</div>
       <div class="arte-icon">🎯</div>
       <div class="arte-title">Landing Pages de Alta Conversão</div>
-      <div class="arte-desc">Páginas focadas em converter visitantes em clientes. Ideal para campanhas e lançamentos.</div>
-      <div class="arte-price">A partir de R$ 297</div>
-      <div class="arte-badge">Pagamento único</div>
+      <div class="arte-desc">Páginas focadas em converter visitantes em clientes. Ideal para campanhas de tráfego pago e lançamentos.</div>
+      <div class="arte-price">A partir de R$ 79</div>
     </div>
     <div class="arte-brand">FH DIGITAL</div>
     <div class="arte-line"></div>
   </div>
 
-  <!-- GOOGLE ADS -->
+  <!-- ARTE 3 - GOOGLE ADS -->
   <div class="arte arte-3">
     <div class="arte-glow"></div>
     <div class="arte-inner">
       <div class="arte-tag">Tráfego Pago</div>
       <div class="arte-icon">📣</div>
       <div class="arte-title">Gestão de Google Ads</div>
-      <div class="arte-desc">Apareça no topo do Google quando seu cliente pesquisar. Campanhas otimizadas para resultado real.</div>
-      <div class="arte-price">A partir de R$ 297/mês</div>
-      <div class="arte-badge">Gestão profissional</div>
+      <div class="arte-desc">Apareça no topo do Google quando seu cliente pesquisar. Campanhas otimizadas para gerar resultado real.</div>
+      <div class="arte-price">A partir de R$ 79/mês</div>
     </div>
     <div class="arte-brand">FH DIGITAL</div>
     <div class="arte-line"></div>
   </div>
 
-  <!-- META ADS -->
+  <!-- ARTE 4 - META ADS -->
   <div class="arte arte-4">
     <div class="arte-glow"></div>
     <div class="arte-inner">
@@ -226,14 +208,13 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
       <div class="arte-icon">📱</div>
       <div class="arte-title">Gestão de Meta Ads</div>
       <div class="arte-desc">Anúncios no Instagram e Facebook segmentados para o seu público ideal. Clientes todos os dias.</div>
-      <div class="arte-price">A partir de R$ 297/mês</div>
-      <div class="arte-badge">Gestão profissional</div>
+      <div class="arte-price">A partir de R$ 79/mês</div>
     </div>
     <div class="arte-brand">FH DIGITAL</div>
     <div class="arte-line"></div>
   </div>
 
-  <!-- SISTEMAS -->
+  <!-- ARTE 5 - SISTEMAS -->
   <div class="arte arte-5">
     <div class="arte-glow"></div>
     <div class="arte-inner">
@@ -242,27 +223,64 @@ p.sub { color: #8b8a9b; text-align: center; margin-bottom: 20px; font-size: 0.9r
       <div class="arte-title">Sistemas Web Personalizados</div>
       <div class="arte-desc">Agendamentos, prontuários e dashboards sob medida para clínicas, consultórios e empresas.</div>
       <div class="arte-price">Sob consulta</div>
-      <div class="arte-badge">100% personalizado</div>
     </div>
     <div class="arte-brand">FH DIGITAL</div>
     <div class="arte-line"></div>
   </div>
 
-  <!-- CARDAPIO -->
+  <!-- ARTE 6 - CARDAPIO -->
   <div class="arte arte-6">
     <div class="arte-glow"></div>
     <div class="arte-inner">
       <div class="arte-tag">E-commerce</div>
       <div class="arte-icon">🍔</div>
       <div class="arte-title">Cardápio Digital</div>
-      <div class="arte-desc">Cardápio online com carrinho e pedidos em tempo real. Sem mensalidade, sem taxa por pedido.</div>
-      <div class="arte-price">A partir de R$ 497</div>
-      <div class="arte-badge">Pagamento único</div>
+      <div class="arte-desc">Cardápio online com carrinho de compras e pedidos em tempo real. Sem mensalidade, sem taxa por pedido.</div>
+      <div class="arte-price">Pagamento único</div>
     </div>
     <div class="arte-brand">FH DIGITAL</div>
     <div class="arte-line"></div>
   </div>
 
 </div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>
