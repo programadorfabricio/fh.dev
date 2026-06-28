@@ -3,88 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Criação de Sites e Marketing Digital em Porto Alegre | FH Digital</title>
-<meta name="description" content="FH Digital: criação de sites, landing pages e gestão de tráfego pago para pequenas empresas em Porto Alegre. Atendimento direto, resultado real.">
-<meta name="keywords" content="criação de site Porto Alegre, marketing digital Porto Alegre, Google Ads Porto Alegre, agência digital Porto Alegre">
+<title>Marketing Digital em Porto Alegre RS | FH Digital</title>
+<meta name="description" content="FH Digital — agência de marketing digital atendendo Porto Alegre de forma 100% remota. Criação de sites, Google Ads, Meta Ads e SEO para pequenas empresas e autônomos.">
+<meta name="keywords" content="marketing digital Porto Alegre, agência marketing Porto Alegre RS, criação de site Porto Alegre, Google Ads Porto Alegre, Meta Ads Porto Alegre, SEO Porto Alegre">
+<meta name="author" content="Fabrício Henrique">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fhdigitalmarketing.com/cidades/porto-alegre.html">
+<link rel="icon" type="image/webp" href="../imagens/favicon.webp">
+<meta property="og:title" content="Marketing Digital em Porto Alegre RS | FH Digital">
+<meta property="og:description" content="FH Digital — agência de marketing digital atendendo Porto Alegre de forma 100% remota. Criação de sites, Google Ads, Meta Ads e SEO para pequenas empresas e autônomos.">
+<meta property="og:url" content="https://fhdigitalmarketing.com/cidades/porto-alegre.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "FH Digital",
+  "url": "https://fhdigitalmarketing.com",
+  "description": "FH Digital — agência de marketing digital atendendo Porto Alegre de forma 100% remota. Criação de sites, Google Ads, Meta Ads e SEO para pequenas empresas e autônomos.",
+  "telephone": "+55-19-98157-7861",
+  "address": { "@type": "PostalAddress", "addressLocality": "Paulínia", "addressRegion": "SP", "addressCountry": "BR" },
+  "areaServed": "Porto Alegre",
+  "priceRange": "R$79 - R$499"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"></noscript>
 <link rel="stylesheet" href="../css/style.css">
+<script src="../js/main.js" defer></script>
+<style>
+.city-hero { min-height: 100vh; display: flex; align-items: center; padding: 7rem 2.5rem 5rem; position: relative; overflow: hidden; }
+.city-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none; }
+.city-glow2 { position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(34,211,160,0.06) 0%, transparent 70%); bottom: 0; left: 10%; pointer-events: none; }
+.city-inner { max-width: 900px; position: relative; z-index: 1; }
+.city-badge { display: inline-flex; align-items: center; gap: 8px; background: #18181f; border: 1px solid rgba(255,255,255,0.13); padding: 0.35rem 0.9rem; border-radius: 100px; font-size: 0.78rem; color: #22d3a0; letter-spacing: 0.05em; font-weight: 500; margin-bottom: 2rem; }
+.city-badge-dot { width: 7px; height: 7px; background: #22d3a0; border-radius: 50%; }
+.city-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 1.5rem; color: #f0eefc; }
+.city-hero h1 em { font-style: normal; background: linear-gradient(135deg, #6c63ff 0%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.city-sub { font-size: 1.1rem; color: #9d9cac; max-width: 560px; font-weight: 300; margin-bottom: 2.5rem; line-height: 1.7; }
+.city-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
+.city-stats { display: flex; gap: 3rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; }
+.city-stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 700; color: #f0eefc; line-height: 1; }
+.city-stat-num span { color: #6c63ff; }
+.city-stat-label { font-size: 0.8rem; color: #9d9cac; margin-top: 4px; }
+.services-city { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+.services-city-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin-top: 3.5rem; }
+.service-city-card { background: #111118; padding: 2rem 1.8rem; transition: background 0.2s; text-decoration: none; display: block; }
+.service-city-card:hover { background: #18181f; }
+.service-city-icon { width: 44px; height: 44px; background: rgba(108,99,255,0.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.2rem; border: 1px solid rgba(108,99,255,0.2); }
+.service-city-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.6rem; color: #f0eefc; }
+.service-city-card p { font-size: 0.88rem; color: #9d9cac; line-height: 1.65; }
+.service-city-tag { display: inline-block; margin-top: 1rem; font-size: 0.72rem; color: #a78bfa; background: rgba(108,99,255,0.12); padding: 0.2rem 0.6rem; border-radius: 4px; }
+.why-city { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+.why-city-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 3.5rem; }
+.why-city-item { background: #111118; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 1.6rem; }
+.why-city-num { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800; color: #6c63ff; opacity: 0.2; line-height: 1; margin-bottom: 8px; }
+.why-city-item h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; color: #f0eefc; font-family: 'Syne', sans-serif; }
+.why-city-item p { font-size: 0.83rem; color: #9d9cac; line-height: 1.6; }
+.seo-city { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+.seo-city-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 3.5rem; }
+.seo-city-block h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; color: #f0eefc; font-family: 'Syne', sans-serif; }
+.seo-city-block p { font-size: 0.9rem; color: #9d9cac; line-height: 1.8; font-weight: 300; }
+.cta-city { background: #111118; border: 1px solid rgba(255,255,255,0.13); border-radius: 20px; padding: 4rem; text-align: center; position: relative; overflow: hidden; margin: 0 2.5rem 6rem; max-width: 1060px; margin-left: auto; margin-right: auto; }
+.cta-city::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(108,99,255,0.1) 0%, transparent 60%); pointer-events: none; }
+.cta-city h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 1rem; color: #f0eefc; position: relative; letter-spacing: -0.02em; }
+.cta-city p { color: #9d9cac; margin-bottom: 2rem; font-weight: 300; position: relative; font-size: 1rem; }
+.cta-city-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
+.faq-city { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+.data-strip { background: #111118; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 1.4rem 1.8rem; margin-top: 2.5rem; font-size: 0.85rem; color: #9d9cac; font-weight: 300; line-height: 1.7; }
+.data-strip strong { color: #f0eefc; font-weight: 600; }
+@media (max-width: 768px) {
+  .city-hero { padding: 5rem 1.2rem 3rem; min-height: auto; }
+  .city-stats { gap: 2rem; }
+  .services-city, .why-city, .seo-city, .faq-city { padding: 4rem 1.2rem; }
+  .seo-city-grid { grid-template-columns: 1fr; gap: 28px; }
+  .cta-city { padding: 2.5rem 1.5rem; margin: 0 1.2rem 4rem; }
+}
+</style>
 </head>
 <body>
 <nav>
-  <a href="/" class="nav-logo"><span class="logo-name"><span class="logo-name-main">FH Digital</span><span class="logo-name-sub">Desenvolvimento & Marketing</span></span></a>
+  <a href="/" class="nav-logo">
+    <span class="logo-name">
+      <span class="logo-name-main">FH Digital</span>
+      <span class="logo-name-sub">Desenvolvimento & Marketing</span>
+    </span>
+  </a>
   <ul class="nav-links">
     <li><a href="/servicos/index.html">Serviços</a></li>
+    <li><a href="/projetos.html">Projetos</a></li>
     <li><a href="/#precos">Preços</a></li>
     <li><a href="/sobre.html">Sobre</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/contato.html">Contato</a></li>
   </ul>
-  <div id="nav-hamburger" class="nav-hamburger"><span></span><span></span><span></span></div>
+  <button id="nav-hamburger" class="nav-hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
   <a href="https://wa.me/5519981577861" class="nav-cta" target="_blank">Falar comigo</a>
 </nav>
 <div id="nav-mobile" class="nav-mobile">
   <a href="/servicos/index.html">Serviços</a>
+  <a href="/projetos.html">Projetos</a>
   <a href="/#precos">Preços</a>
   <a href="/sobre.html">Sobre</a>
   <a href="/blog/">Blog</a>
   <a href="/contato.html">Contato</a>
 </div>
-<div class="service-hero">
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="breadcrumb"><a href="/">Home</a> <span>›</span> Porto Alegre</div>
-    <div class="hero-badge"><div class="badge-dot"></div> Atendemos Porto Alegre e região</div>
-    <h1>Criação de Sites e Marketing Digital<br>para empresas em <em>Porto Alegre</em></h1>
-    <p class="hero-sub">A FH Digital ajuda pequenas empresas em Porto Alegre a crescerem no digital com sites profissionais, landing pages e gestão de tráfego pago. Atendimento 100% online, resultado real.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5519981577861?text=Olá! Sou de Porto Alegre e quero saber mais." class="btn-primary" target="_blank">Falar pelo WhatsApp</a>
-      <a href="/servicos/index.html" class="btn-ghost">Ver serviços</a>
+
+<main>
+
+<div class="city-hero">
+  <div class="city-glow"></div>
+  <div class="city-glow2"></div>
+  <div class="city-inner">
+    <div class="city-badge"><div class="city-badge-dot"></div> 📍 Porto Alegre, RS</div>
+    <h1>Marketing Digital para empresas de <em>Porto Alegre</em>, com atendimento remoto e direto.</h1>
+    <p class="city-sub">A FH Digital atende Porto Alegre de forma 100% remota, com sede em Paulínia, SP. Criamos sites, gerenciamos anúncios e aplicamos SEO para pequenas empresas e autônomos gaúchos crescerem no digital.</p>
+    <div class="city-actions">
+      <a href="https://wa.me/5519981577861?text=Olá! Vi a página de Porto Alegre e quero saber mais." class="btn-primary" target="_blank">📲 Falar pelo WhatsApp</a>
+      <a href="/#precos" class="btn-ghost">Ver planos e preços →</a>
+    </div>
+    <div class="city-stats">
+      <div><div class="city-stat-num">5<span>★</span></div><div class="city-stat-label">Avaliação no Google</div></div>
+      <div><div class="city-stat-num">100<span>%</span></div><div class="city-stat-label">Atendimento remoto</div></div>
+      <div><div class="city-stat-num">R$79<span></span></div><div class="city-stat-label">A partir de</div></div>
+      <div><div class="city-stat-num">88<span>mil</span></div><div class="city-stat-label">MEIs ativos na cidade*</div></div>
     </div>
   </div>
 </div>
-<section>
-  <p class="section-label">Por que a FH Digital</p>
-  <h2 class="section-title">Sua empresa em Porto Alegre<br>merece presença digital de verdade</h2>
-  <p class="section-sub">Porto Alegre tem um mercado forte em tecnologia e agronegócio. Quem não aparece no Google perde clientes todos os dias para a concorrência.</p>
-  <div class="benefits-grid" style="margin-top:3rem;">
-    <div class="benefit-card"><div class="benefit-icon">🏙️</div><h3>Mercado de Porto Alegre</h3><p>Soluções pensadas para a realidade e o público gaúcha de Porto Alegre e região metropolitana.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">🎯</div><h3>Segmentação local</h3><p>Campanhas segmentadas para as principais regiões de Porto Alegre: Moinhos de Vento, Petrópolis, Zona Norte.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">⚡</div><h3>Entrega rápida</h3><p>Sites e landing pages entregues em até 7 dias úteis. Sem enrolação, sem burocracia.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">📞</div><h3>Atendimento direto</h3><p>Você fala diretamente com quem executa. Sem intermediários, sem ruído na comunicação.</p></div>
+
+<section class="services-city">
+  <p class="section-label">O que fazemos</p>
+  <h2 class="section-title">Serviços de marketing digital<br>para empresas de Porto Alegre</h2>
+  <p class="section-sub">Do site ao anúncio, entregamos o que precisa funcionar para o seu negócio crescer em Porto Alegre.</p>
+  <div class="services-city-grid">
+    <a href="/servicos/sites.html" class="service-city-card">
+      <div class="service-city-icon">🌐</div>
+      <h3>Criação de Sites</h3>
+      <p>Sites rápidos, modernos e otimizados para empresas de Porto Alegre. Design exclusivo, responsivo e preparado para ranquear no Google.</p>
+      <span class="service-city-tag">Desenvolvimento</span>
+    </a>
+    <a href="/servicos/google-ads.html" class="service-city-card">
+      <div class="service-city-icon">📣</div>
+      <h3>Google Ads em Porto Alegre</h3>
+      <p>Campanhas segmentadas para Porto Alegre e região metropolitana. Apareça para quem já está procurando o que você vende.</p>
+      <span class="service-city-tag">Tráfego Pago</span>
+    </a>
+    <a href="/servicos/meta-ads.html" class="service-city-card">
+      <div class="service-city-icon">📱</div>
+      <h3>Meta Ads para Porto Alegre</h3>
+      <p>Anúncios no Instagram e Facebook segmentados para o público gaúcho. Alcance seu cliente ideal no momento certo.</p>
+      <span class="service-city-tag">Tráfego Pago</span>
+    </a>
+    <a href="/servicos/landing-page.html" class="service-city-card">
+      <div class="service-city-icon">🎯</div>
+      <h3>Landing Pages</h3>
+      <p>Páginas de alta conversão para capturar leads e divulgar serviços. Design focado em transformar visitantes em clientes.</p>
+      <span class="service-city-tag">Conversão</span>
+    </a>
+    <a href="/servicos/sistemas.html" class="service-city-card">
+      <div class="service-city-icon">🏥</div>
+      <h3>SEO Local em Porto Alegre</h3>
+      <p>Apareça quando alguém buscar pelo seu serviço em Porto Alegre. Otimizamos seu site e Google Meu Negócio para você ser encontrado organicamente.</p>
+      <span class="service-city-tag">SEO</span>
+    </a>
+    <a href="/servicos/cardapio-digital.html" class="service-city-card">
+      <div class="service-city-icon">🍔</div>
+      <h3>Cardápio Digital</h3>
+      <p>Cardápio online com carrinho e pedidos em tempo real para restaurantes e deliveries de Porto Alegre.</p>
+      <span class="service-city-tag">E-commerce</span>
+    </a>
   </div>
 </section>
+
 <hr class="divider">
-<section>
-  <p class="section-label">Serviços</p>
-  <h2 class="section-title">O que oferecemos para<br>empresas em Porto Alegre</h2>
-  <div class="services-grid">
-    <a href="/servicos/sites.html" class="service-card"><div class="service-icon">🌐</div><h3>Sites para Porto Alegre</h3><p>Sites profissionais para lojas, clínicas e prestadores de serviço em Porto Alegre e região.</p><span class="service-tag">Desenvolvimento</span></a>
-    <a href="/servicos/google-ads.html" class="service-card"><div class="service-icon">📣</div><h3>Google Ads em Porto Alegre</h3><p>Apareça no topo do Google quando seu cliente em Porto Alegre pesquisar pelo seu serviço.</p><span class="service-tag">Tráfego Pago</span></a>
-    <a href="/servicos/landing-page.html" class="service-card"><div class="service-icon">🎯</div><h3>Landing Pages</h3><p>Páginas de alta conversão para capturar leads de clientes em Porto Alegre e arredores.</p><span class="service-tag">Conversão</span></a>
-    <a href="/servicos/meta-ads.html" class="service-card"><div class="service-icon">📱</div><h3>Meta Ads para Porto Alegre</h3><p>Anúncios no Instagram e Facebook segmentados para o público de Porto Alegre.</p><span class="service-tag">Tráfego Pago</span></a>
+
+<section class="why-city">
+  <p class="section-label">Por que nos escolher</p>
+  <h2 class="section-title">Marketing digital para Porto Alegre,<br>feito com proximidade mesmo a distância</h2>
+  <div class="why-city-grid">
+    <div class="why-city-item"><div class="why-city-num">01</div><h3>Atendimento 100% remoto</h3><p>Não temos escritório em Porto Alegre — e somos transparentes sobre isso. O atendimento é por videochamada e WhatsApp, com agilidade de resposta.</p></div>
+    <div class="why-city-item"><div class="why-city-num">02</div><h3>Forte presença de tecnologia e educação</h3><p>Porto Alegre tem cerca de 88 mil MEIs ativos, com destaque para comércio, tecnologia, saúde, educação e serviços. Adaptamos a comunicação ao perfil mais analítico desse público.</p></div>
+    <div class="why-city-item"><div class="why-city-num">03</div><h3>Resultado mensurável</h3><p>Relatórios claros com cliques, contatos e retorno. Você sabe exatamente o que está funcionando a cada semana.</p></div>
+    <div class="why-city-item"><div class="why-city-num">04</div><h3>Preço justo</h3><p>Planos a partir de R$79,99 pensados para pequenas empresas e autônomos gaúchos que estão começando no digital.</p></div>
   </div>
 </section>
-<section>
-  <div class="cta-banner">
-    <h2>Pronto para crescer em Porto Alegre?</h2>
-    <p>Fale agora com a FH Digital e receba um orçamento sem compromisso em até 24h.</p>
-    <div class="cta-banner-actions">
-      <a href="https://wa.me/5519981577861?text=Olá! Sou de Porto Alegre e quero um orçamento." class="btn-primary" target="_blank">Falar pelo WhatsApp</a>
-      <a href="/contato.html" class="btn-ghost">Enviar mensagem</a>
+
+<hr class="divider">
+
+<section class="seo-city">
+  <p class="section-label">Marketing digital em Porto Alegre</p>
+  <h2 class="section-title">O que o mercado gaúcho pede<br>de uma estratégia digital</h2>
+  <div class="seo-city-grid">
+    <div class="seo-city-block">
+      <h3>Forte presença de tecnologia e educação</h3>
+      <p>Porto Alegre tem ecossistema relevante de tecnologia e instituições de ensino, ao lado de comércio e saúde bem estabelecidos. Negócios desse perfil costumam responder bem a conteúdo educativo e dados concretos nas campanhas.</p>
+    </div>
+    <div class="seo-city-block">
+      <h3>Público que valoriza transparência</h3>
+      <p>O consumidor gaúcho costuma valorizar comunicação direta e sem exageros. Evitamos promessas vagas e focamos em apresentar resultados concretos e mensuráveis nas campanhas para a região.</p>
+    </div>
+    <div class="seo-city-block">
+      <h3>SEO local para concorrer por bairro</h3>
+      <p>Com regiões comerciais bem definidas, otimizar o Google Meu Negócio por bairro ajuda pequenos negócios a aparecer nas buscas "perto de mim" em Porto Alegre.</p>
+    </div>
+    <div class="seo-city-block">
+      <h3>Site profissional para representar a marca</h3>
+      <p>Criamos sites rápidos e modernos que representam sua empresa de forma profissional, já otimizados para SEO local desde o primeiro dia no ar.</p>
+    </div>
+  </div>
+  <div class="data-strip">
+    <strong>Fonte dos dados:</strong> número aproximado de MEIs ativos e setores econômicos com base em levantamentos públicos (Sebrae / Observatório do Trabalho). Números podem variar conforme a data de atualização da base.
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="faq-city">
+  <p class="section-label">Dúvidas frequentes</p>
+  <h2 class="section-title">Perguntas sobre marketing<br>digital em Porto Alegre</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Vocês têm escritório em Porto Alegre? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Não. A FH Digital está sediada em Paulínia, SP, e atende Porto Alegre de forma 100% remota — por videochamada, WhatsApp e e-mail. Isso permite manter preços mais acessíveis sem perder qualidade.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Quanto tempo leva para minha empresa aparecer no Google? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Com Google Ads sua empresa pode aparecer nas primeiras posições em menos de 24 horas após a ativação. Para SEO orgânico, os primeiros resultados aparecem geralmente entre 60 e 90 dias de trabalho consistente.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Qual o investimento mínimo para começar? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Nossos planos começam a partir de R$79,99 — tanto para criação de sites quanto para gestão de tráfego pago. Soluções acessíveis para pequenas empresas e autônomos.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Vocês fazem diagnóstico gratuito? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Sim! Oferecemos diagnóstico gratuito de marketing digital. Analisamos como sua empresa aparece no Google, suas redes sociais e o que os concorrentes do seu nicho estão fazendo. Entre em contato pelo WhatsApp para agendar.</div>
     </div>
   </div>
 </section>
+
+<div class="cta-city">
+  <h2>Pronto para sua empresa crescer em Porto Alegre?</h2>
+  <p>Diagnóstico gratuito, sem compromisso. Vamos analisar a situação da sua empresa e mostrar o que é possível fazer.</p>
+  <div class="cta-city-actions">
+    <a href="https://wa.me/5519981577861?text=Olá! Vim pela página de Porto Alegre e quero um diagnóstico gratuito." class="btn-primary" target="_blank">📲 Quero um diagnóstico gratuito</a>
+    <a href="/#precos" class="btn-ghost">Ver planos e preços →</a>
+  </div>
+</div>
+
+</main>
+
 <footer>
-  <p>© 2026 FH Digital — fhdigitalmarketing.com. Todos os direitos reservados.</p>
+  <p>© 2026 FH Digital — <a href="https://fhdigitalmarketing.com" style="color:inherit">fhdigitalmarketing.com</a> · Paulínia, SP · Atendimento remoto em todo o Brasil</p>
   <div class="footer-links">
     <a href="https://instagram.com/fhdevoficial" target="_blank" class="social-btn">Instagram</a>
     <a href="https://www.linkedin.com/in/fabriciohenriquefh/" target="_blank" class="social-btn">LinkedIn</a>
+    <a href="https://github.com/programadorfabricio" target="_blank" class="social-btn">GitHub</a>
   </div>
 </footer>
-<a href="https://api.whatsapp.com/send/?phone=5519981577861" class="btn-whatsapp" target="_blank"><img src="../imagens/whatsapp.png" alt="WhatsApp"></a>
-<script src="../js/main.js"></script>
+
+<a href="https://api.whatsapp.com/send/?phone=5519981577861" class="btn-whatsapp" target="_blank">
+  <img src="../imagens/whatsapp.webp" alt="Falar pelo WhatsApp" width="56" height="56" fetchpriority="high">
+</a>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-70XKXZ8JML"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-70XKXZ8JML');</script>
+
 </body>
 </html>
