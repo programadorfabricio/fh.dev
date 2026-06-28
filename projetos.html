@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos e Cases | FH Digital — Criação de Sites e Sistemas</title>
+<meta name="description" content="Confira projetos reais desenvolvidos pela FH Digital: sistemas de gestão, sites institucionais, cardápios digitais e landing pages para empresas em todo o Brasil.">
+<meta name="keywords" content="portfolio agência marketing digital, projetos FH Digital, sistema de gestão, site institucional, cardápio digital">
+<meta name="author" content="Fabrício Henrique">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fhdigitalmarketing.com/projetos.html">
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+<link rel="shortcut icon" href="imagens/favicon.webp">
+<link rel="apple-touch-icon" href="imagens/favicon.webp">
+
+<meta property="og:title" content="Projetos e Cases | FH Digital">
+<meta property="og:description" content="Sistemas de gestão, sites e cardápios digitais desenvolvidos pela FH Digital.">
+<meta property="og:url" content="https://fhdigitalmarketing.com/projetos.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projetos e Cases | FH Digital">
+<meta name="twitter:description" content="Sistemas de gestão, sites e cardápios digitais desenvolvidos pela FH Digital.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "FH Digital",
+  "url": "https://fhdigitalmarketing.com",
+  "description": "Criação de sites, landing pages, sistemas e gestão de tráfego pago para pequenas empresas, autônomos e lojas físicas em todo o Brasil.",
+  "telephone": "+55-19-98157-7861",
+  "email": "fhdigital.com.br@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Paulínia", "addressRegion": "SP", "addressCountry": "BR" },
+  "areaServed": "BR",
+  "priceRange": "R$79 - R$499",
+  "sameAs": ["https://www.instagram.com/fhdevoficial","https://www.linkedin.com/in/fabriciohenriquefh","https://github.com/programadorfabricio"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+</noscript>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+
+<style>
+  /* Estilos específicos da página de Projetos */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.6rem;
+    margin-top: 3.5rem;
+  }
+  .project-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover {
+    border-color: var(--border-light);
+    transform: translateY(-3px);
+  }
+  .project-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+  }
+  .project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .project-card:hover .project-thumb img {
+    transform: scale(1.04);
+  }
+  .project-body {
+    padding: 1.6rem 1.6rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .project-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: var(--accent2);
+    background: rgba(108, 99, 255, 0.12);
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.9rem;
+    align-self: flex-start;
+    font-weight: 500;
+  }
+  .project-card h3 {
+    font-family: "Syne", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.55rem;
+  }
+  .project-card p {
+    font-size: 0.87rem;
+    color: var(--muted);
+    line-height: 1.65;
+    font-weight: 300;
+    flex: 1;
+    margin-bottom: 1.2rem;
+  }
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0;
+  }
+  .project-chip {
+    font-size: 0.72rem;
+    color: var(--muted);
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 0.22rem 0.6rem;
+    border-radius: 100px;
+  }
+  .project-note {
+    margin-top: 4rem;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.4rem 1.7rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .project-note strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="logo-name">
+      <span class="logo-name-main">FH Digital</span>
+      <span class="logo-name-sub">Desenvolvimento & Marketing</span>
+    </span>
+  </a>
+ <ul class="nav-links">
+    <li><a href="/servicos/index.html">Serviços</a></li>
+    <li><a href="/projetos.html" class="active">Projetos</a></li>
+    <li><a href="/#precos">Preços</a></li>
+    <li><a href="/sobre.html">Sobre</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contato.html">Contato</a></li>
+  </ul>
+  <button id="nav-hamburger" class="nav-hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="https://wa.me/5519981577861" class="nav-cta" target="_blank">Falar comigo</a>
+</nav>
+<div id="nav-mobile" class="nav-mobile">
+  <a href="/servicos/index.html">Serviços</a>
+  <a href="/projetos.html">Projetos</a>
+  <a href="/#precos">Preços</a>
+  <a href="/sobre.html">Sobre</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contato.html">Contato</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<div class="service-hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Início</a>
+      <span>/</span>
+      <span>Projetos</span>
+    </div>
+    <h1>Projetos que já <em>colocamos no ar</em></h1>
+    <p class="hero-sub">
+      Sistemas de gestão, sites institucionais e cardápios digitais desenvolvidos pela FH Digital. Cada projeto pensado sob medida para a necessidade real do negócio.
+    </p>
+  </div>
+</div>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <p class="section-label">Portfólio</p>
+  <h2 class="section-title">Do sistema ao site,<br>soluções que funcionam</h2>
+  <p class="section-sub">Uma amostra de projetos desenvolvidos pela FH Digital — de sistemas completos de gestão a sites institucionais e cardápios digitais.</p>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="imagens/caipira.webp" alt="Dashboard do sistema de gestão Restaurante Caipira, desenvolvido pela FH Digital" loading="lazy">
+      </div>
+      <div class="project-body">
+        <span class="project-tag">Sistema Web</span>
+        <h3>Restaurante Caipira — Sistema de Gestão</h3>
+        <p>Sistema completo de gestão para restaurante, com controle de mesas, comandas, vendas, estoque, financeiro e atendimento via WhatsApp — tudo em um único painel.</p>
+        <div class="project-meta">
+          <span class="project-chip">Dashboard</span>
+          <span class="project-chip">Gestão de Vendas</span>
+          <span class="project-chip">Supabase</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="imagens/imperio-bebidas.webp" alt="Dashboard do sistema de gestão Império Bebidas, desenvolvido pela FH Digital" loading="lazy">
+      </div>
+      <div class="project-body">
+        <span class="project-tag">Sistema Web</span>
+        <h3>Império Bebidas — Sistema de Gestão</h3>
+        <p>Sistema de gestão para adega, com controle de comandas abertas, vendas em tempo real (Pix, cartão e dinheiro), estoque e relatório de faturamento dos últimos dias.</p>
+        <div class="project-meta">
+          <span class="project-chip">Dashboard</span>
+          <span class="project-chip">Controle de Estoque</span>
+          <span class="project-chip">Financeiro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="imagens/clinica.webp" alt="Painel administrativo de sistema de gestão para clínica, desenvolvido pela FH Digital" loading="lazy">
+      </div>
+      <div class="project-body">
+        <span class="project-tag">Sistema Web</span>
+        <h3>Sistema Clínica — Gestão Clínica</h3>
+        <p>Painel administrativo para clínicas, com agendamento de consultas, cadastro de pacientes, prontuário, controle financeiro e estoque em um só lugar.</p>
+        <div class="project-meta">
+          <span class="project-chip">Agendamento</span>
+          <span class="project-chip">Prontuário</span>
+          <span class="project-chip">Financeiro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="imagens/artico.webp" alt="Site institucional da Ártico Climatização, desenvolvido pela FH Digital" loading="lazy">
+      </div>
+      <div class="project-body">
+        <span class="project-tag">Site Institucional</span>
+        <h3>Ártico Climatização</h3>
+        <p>Site institucional para empresa de climatização, com seções de serviços, área de clientes e botão de orçamento direto — pensado para conversão e geração de leads.</p>
+        <div class="project-meta">
+          <span class="project-chip">Landing Page</span>
+          <span class="project-chip">Geração de Leads</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="imagens/kuro.webp" alt="Página inicial do cardápio digital Kuro Sushi & Sake, desenvolvido pela FH Digital" loading="lazy">
+      </div>
+      <div class="project-body">
+        <span class="project-tag">Cardápio Digital</span>
+        <h3>Kuro Sushi & Sake</h3>
+        <p>Cardápio digital para restaurante japonês, com carrinho de compras funcional, filtros por categoria e sistema de pedidos em tempo real.</p>
+        <div class="project-meta">
+          <span class="project-chip">E-commerce</span>
+          <span class="project-chip">Carrinho de Compras</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="imagens/netclone.webp" alt="Interface de catálogo de filmes desenvolvida como exercício técnico front-end" loading="lazy">
+      </div>
+      <div class="project-body">
+        <span class="project-tag">Front-End React</span>
+        <h3>Catálogo de Filmes e Séries</h3>
+        <p>Aplicação desenvolvida com React e Vite, consumindo API pública para listar filmes e séries com busca e categorias. Projeto técnico para demonstração de habilidades em front-end.</p>
+        <div class="project-meta">
+          <span class="project-chip">React</span>
+          <span class="project-chip">Consumo de API</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="project-note">
+    <strong>Nota:</strong> alguns dos projetos acima foram desenvolvidos como demonstrações técnicas e protótipos comerciais da FH Digital, sem vínculo com clientes reais até o momento. Os sistemas e sites são totalmente funcionais e refletem a qualidade do trabalho entregue.
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- CTA -->
+<section id="cta-final">
+  <div class="cta-banner">
+    <h2>Quer um projeto assim<br>para o seu negócio?</h2>
+    <p>Sites, sistemas e cardápios digitais sob medida, com atendimento direto e sem intermediários.</p>
+    <div class="cta-banner-actions">
+      <a href="https://wa.me/5519981577861?text=Olá! Vi os projetos da FH Digital e quero saber mais." class="btn-primary" target="_blank">Falar pelo WhatsApp</a>
+      <a href="/servicos/index.html" class="btn-ghost">Ver todos os serviços</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 FH Digital — fhdigitalmarketing.com. Todos os direitos reservados.</p>
+  <div class="footer-links">
+    <a href="https://instagram.com/fhdevoficial" target="_blank" class="social-btn">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61569257632209" target="_blank" class="social-btn">Facebook</a>
+    <a href="https://www.linkedin.com/in/fabriciohenriquefh/" target="_blank" class="social-btn">LinkedIn</a>
+    <a href="https://github.com/programadorfabricio" target="_blank" class="social-btn">GitHub</a>
+  </div>
+</footer>
+
+<a href="https://api.whatsapp.com/send/?phone=5519981577861" class="btn-whatsapp" target="_blank">
+  <img src="imagens/whatsapp.webp" alt="Falar pelo WhatsApp" width="56" height="56" fetchpriority="high">
+</a>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-70XKXZ8JML"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-70XKXZ8JML');</script>
+
+</body>
+</html>
