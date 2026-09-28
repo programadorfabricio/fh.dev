@@ -1,0 +1,96 @@
+/* Páginas de produto (Ponto FH e Comanda FH) — usa os tokens do style.css */
+.produto { --cor: var(--green); --cor-fundo: rgba(34, 211, 160, 0.1); }
+.produto.comanda { --cor: #fb923c; --cor-fundo: rgba(251, 146, 60, 0.12); }
+
+.produto .service-hero h1 em { color: var(--cor); font-style: normal; }
+.produto .btn-primary { background: var(--cor); color: #0a0a0f; }
+.produto .section-label { color: var(--cor); }
+.selo-produto {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 500;
+  color: var(--cor); background: var(--cor-fundo); border-radius: 999px; padding: 6px 14px; margin-bottom: 1.2rem;
+}
+.hero-pontos { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin-top: 1.8rem; color: var(--muted); font-size: 0.9rem; }
+.hero-pontos span::before { content: "✓ "; color: var(--cor); font-weight: 700; }
+
+/* Telas desenhadas do sistema */
+.telas { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: 1.5rem; align-items: end; margin-top: 3rem; }
+@media (max-width: 760px) { .telas { grid-template-columns: minmax(0, 1fr); } }
+.tela {
+  background: var(--bg2); border: 1px solid var(--border-light); border-radius: 22px; padding: 14px;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8);
+}
+.tela-interna { background: #0d0d13; border-radius: 12px; padding: 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; min-height: 100%; }
+.tela-legenda { font-size: 0.8rem; color: var(--muted2); text-align: center; margin-top: 0.7rem; }
+.tela-topo { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--muted); }
+.tela-topo b { color: var(--text); font-size: 0.95rem; }
+.ao-vivo { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; color: var(--cor); }
+.ao-vivo::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cor); }
+.numeros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
+.numero { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 0.6rem 0.75rem; }
+.numero b { display: block; font-family: "Syne", sans-serif; font-size: 1.4rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.numero span { font-size: 0.72rem; color: var(--muted); }
+.lista { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; }
+.item { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.82rem; }
+.item:last-child { border-bottom: 0; }
+.item small { display: block; color: var(--muted2); font-size: 0.72rem; }
+.tag { font-size: 0.7rem; border-radius: 999px; padding: 2px 9px; white-space: nowrap; background: var(--border-light); color: var(--muted); }
+.tag.ok { background: rgba(34, 211, 160, 0.14); color: #4ee6b8; }
+.tag.alerta { background: rgba(251, 191, 36, 0.14); color: #fcd34d; }
+.tag.ruim { background: rgba(248, 113, 113, 0.14); color: #fca5a5; }
+.tag.laranja { background: rgba(251, 146, 60, 0.16); color: #fdba74; }
+
+/* quiosque do ponto */
+.camera { aspect-ratio: 3 / 4; border-radius: 12px; background: radial-gradient(circle at 50% 40%, #23232d, #0d0d13 70%); display: flex; align-items: center; justify-content: center; position: relative; }
+.camera .rosto { width: 46%; aspect-ratio: 3 / 4; border: 2px solid var(--cor); border-radius: 45%; box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.25) inset; }
+.camera .ok { position: absolute; bottom: 12px; left: 12px; right: 12px; background: var(--cor); color: #0a0a0f; border-radius: 10px; padding: 0.55rem; text-align: center; font-size: 0.8rem; font-weight: 700; line-height: 1.3; }
+.relogio { font-family: "Syne", sans-serif; font-size: 1.6rem; text-align: center; font-weight: 700; }
+
+/* tablet do comanda */
+.cardapio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; }
+.prato { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 0.75rem; }
+.prato .foto { aspect-ratio: 16 / 10; background: linear-gradient(135deg, #7c2d12, #fb923c); }
+.prato:nth-child(2) .foto { background: linear-gradient(135deg, #78350f, #fcd34d); }
+.prato:nth-child(3) .foto { background: linear-gradient(135deg, #3f1d0b, #c2410c); }
+.prato div:last-child { padding: 0.45rem 0.55rem; }
+.prato b { display: block; color: var(--cor); }
+.carrinho { background: var(--cor); color: #0a0a0f; border-radius: 10px; padding: 0.6rem 0.8rem; display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; }
+.pedido-cozinha { border: 1px solid rgba(251, 146, 60, 0.5); background: rgba(251, 146, 60, 0.07); border-radius: 10px; padding: 0.7rem 0.8rem; font-size: 0.82rem; }
+.pedido-cozinha .obs { color: #fcd34d; font-size: 0.76rem; }
+
+/* passos */
+.passos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; margin-top: 3rem; counter-reset: passo; }
+.passo { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.6rem; counter-increment: passo; }
+.passo::before { content: counter(passo); display: inline-flex; width: 2rem; height: 2rem; align-items: center; justify-content: center; border-radius: 50%; background: var(--cor-fundo); color: var(--cor); font-family: "Syne", sans-serif; font-weight: 700; margin-bottom: 0.9rem; }
+.passo h3 { font-family: "Syne", sans-serif; font-size: 1.05rem; margin-bottom: 0.4rem; }
+.passo p { color: var(--muted); font-size: 0.92rem; }
+
+/* preços */
+.planos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 3rem; }
+.plano { background: var(--bg2); border: 1px solid var(--border); border-radius: 18px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.plano.destaque { border-color: var(--cor); box-shadow: 0 0 0 1px var(--cor) inset; }
+.plano-topo { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.plano h3 { font-family: "Syne", sans-serif; font-size: 1.4rem; }
+.plano .desc { color: var(--muted); font-size: 0.9rem; }
+.plano .selo { font-size: 0.72rem; font-weight: 600; color: #0a0a0f; background: var(--cor); border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+.faixas { border-top: 1px solid var(--border); }
+.faixa { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
+.faixa span { color: var(--muted); }
+.faixa b { font-family: "Syne", sans-serif; font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.faixa b small { font-family: "DM Sans", sans-serif; font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+.plano ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.9rem; color: var(--muted); }
+.plano ul li::before { content: "✓  "; color: var(--cor); font-weight: 700; }
+.extras { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.2rem; }
+.extra { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem 1.3rem; }
+.extra span { font-size: 0.8rem; color: var(--muted); }
+.extra b { display: block; font-family: "Syne", sans-serif; font-size: 1.3rem; margin: 0.2rem 0; }
+.extra p { font-size: 0.82rem; color: var(--muted2); line-height: 1.5; }
+.nota { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted2); }
+
+/* para quem é */
+.segmentos { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
+.segmentos span { border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.9rem; color: var(--text); }
+
+.destaque-faixa { margin-top: 2rem; background: var(--cor-fundo); border: 1px solid var(--cor); border-radius: 16px; padding: 1.4rem 1.6rem; }
+.destaque-faixa b { color: var(--cor); }
+
+.produto .cta-banner .btn-primary { background: var(--cor); }
