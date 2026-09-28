@@ -120,3 +120,4 @@
 .cidades-links a { border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.9rem; color: var(--text); text-decoration: none; }
 .cidades-links a:hover { border-color: var(--cor); color: var(--cor); }
 .nota a { color: var(--cor); }
+.produto.delivery { --cor: #fb7185; --cor-fundo: rgba(251, 113, 133, 0.12); }
