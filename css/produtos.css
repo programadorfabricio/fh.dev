@@ -94,3 +94,26 @@
 .destaque-faixa b { color: var(--cor); }
 
 .produto .cta-banner .btn-primary { background: var(--cor); }
+
+/* Agenda FH (barbearia) e Adega FH */
+.produto.barbearia { --cor: #38bdf8; --cor-fundo: rgba(56, 189, 248, 0.12); }
+.produto.adega { --cor: #facc15; --cor-fundo: rgba(250, 204, 21, 0.12); }
+.telas.celular { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); }
+@media (max-width: 760px) { .telas.celular { grid-template-columns: minmax(0, 1fr); } }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip { font-size: 0.75rem; border: 1px solid var(--border-light); border-radius: 999px; padding: 4px 10px; color: var(--muted); }
+.chip.sel { border-color: var(--cor); color: var(--cor); background: var(--cor-fundo); }
+.horarios { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.4rem; }
+.horarios span { text-align: center; font-size: 0.78rem; border-radius: 8px; padding: 0.45rem 0; background: var(--bg3); border: 1px solid var(--border); }
+.horarios span.ocupado { color: var(--muted2); text-decoration: line-through; opacity: 0.6; }
+.horarios span.sel { background: var(--cor); color: #0a0a0f; font-weight: 700; border-color: var(--cor); }
+.rotulo { font-size: 0.72rem; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.06em; }
+.estrelas { color: #facc15; letter-spacing: 1px; }
+.pdv { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 0.7rem; }
+@media (max-width: 520px) { .pdv { grid-template-columns: minmax(0, 1fr); } }
+.pagamentos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; }
+.pagamentos span { text-align: center; font-size: 0.75rem; border-radius: 8px; padding: 0.45rem 0; background: var(--bg3); border: 1px solid var(--border); }
+.pagamentos span.sel { border-color: var(--cor); color: var(--cor); background: var(--cor-fundo); }
+.total { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.82rem; color: var(--muted); }
+.total b { font-family: "Syne", sans-serif; font-size: 1.4rem; color: var(--text); font-variant-numeric: tabular-nums; }
+.planos:has(> .plano:only-child) { max-width: 560px; }
