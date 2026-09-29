@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordem de Serviço Digital | FH Digital</title>
+  <meta name="description" content="Sistema digital de ordem de serviço com aprovação online. Ideal para oficinas, assistência técnica e ar-condicionado. R$ 100/mês, teste grátis por 7 dias.">
+  <meta name="keywords" content="ordem de serviço digital, orçamento online, sistema oficina, assistência técnica, ar-condicionado, software gestão">
+  <meta name="author" content="Fabrício Henrique">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fhdigitalmarketing.com/os-fh.html">
+  <link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+  <meta property="og:title" content="Ordem de Serviço Digital | FH Digital">
+  <meta property="og:description" content="Gerencie orçamentos com aprovação online. R$ 100/mês, teste grátis por 7 dias.">
+  <meta property="og:url" content="https://fhdigitalmarketing.com/os-fh.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --color-blue: #2563eb;
+      --color-blue-dark: #1d4ed8;
+      --color-green: #16a34a;
+      --color-gray-50: #f8fafc;
+      --color-gray-100: #f1f5f9;
+      --color-gray-600: #4b5563;
+      --color-gray-900: #0f172a;
+    }
+
+    .os-hero {
+      background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%);
+      padding: 80px 20px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .os-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--color-gray-900);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .os-hero p {
+      font-size: 1.25rem;
+      color: var(--color-gray-600);
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .os-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: var(--color-blue);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .os-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .os-section {
+      margin: 80px auto;
+    }
+
+    .os-section h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--color-gray-900);
+      margin-bottom: 50px;
+    }
+
+    .os-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .os-card {
+      background: var(--color-gray-50);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .os-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-gray-900);
+      margin-bottom: 12px;
+    }
+
+    .os-card p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .os-card-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .os-pricing {
+      background: linear-gradient(135deg, #dbeafe 0%, #fce7f3 100%);
+      padding: 60px 20px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .os-pricing-card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 450px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .os-pricing-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-gray-900);
+      margin-bottom: 10px;
+    }
+
+    .os-pricing-card p {
+      color: var(--color-gray-600);
+      margin-bottom: 20px;
+    }
+
+    .os-price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--color-gray-900);
+      margin-bottom: 5px;
+    }
+
+    .os-price-period {
+      color: var(--color-gray-600);
+      font-size: 1rem;
+    }
+
+    .os-features {
+      list-style: none;
+      margin: 30px 0;
+      text-align: left;
+    }
+
+    .os-features li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      color: var(--color-gray-600);
+    }
+
+    .os-features li:last-child {
+      border-bottom: none;
+    }
+
+    .os-features li::before {
+      content: "✓";
+      color: var(--color-green);
+      font-weight: 700;
+      margin-right: 12px;
+      font-size: 1.2rem;
+    }
+
+    .os-button {
+      background: var(--color-blue);
+      color: white;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .os-button:hover {
+      background: var(--color-blue-dark);
+    }
+
+    .os-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .os-faq {
+      display: grid;
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .os-faq-item {
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: var(--color-gray-50);
+    }
+
+    .os-faq-item h4 {
+      font-weight: 600;
+      color: var(--color-gray-900);
+      margin-bottom: 10px;
+    }
+
+    .os-faq-item p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+
+    .os-cta-final {
+      background: var(--color-blue);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin: 60px 0;
+    }
+
+    .os-cta-final h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .os-cta-final p {
+      color: #bfdbfe;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .os-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .os-step-num {
+      background: var(--color-blue);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .os-step h4 {
+      font-weight: 600;
+      color: var(--color-gray-900);
+      margin-bottom: 5px;
+    }
+
+    .os-step p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+
+    .os-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .os-hero h1 {
+        font-size: 2rem;
+      }
+
+      .os-pricing {
+        padding: 40px 20px;
+      }
+
+      .os-price {
+        font-size: 2.5rem;
+      }
+
+      .os-section h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="logo-name">
+      <span class="logo-name-main">FH Digital</span>
+      <span class="logo-name-sub">Desenvolvimento & Marketing</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/servicos/index.html">Serviços</a></li>
+    <li><a href="/projetos.html">Projetos</a></li>
+    <li><a href="#preco">Preços</a></li>
+    <li><a href="/sobre.html">Sobre</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contato.html">Contato</a></li>
+  </ul>
+  <button id="nav-hamburger" class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="https://wa.me/5519981577861" class="nav-cta" target="_blank">Falar comigo</a>
+</nav>
+
+<div id="nav-mobile" class="nav-mobile">
+  <a href="/servicos/index.html">Serviços</a>
+  <a href="/projetos.html">Projetos</a>
+  <a href="/#preco">Preços</a>
+  <a href="/sobre.html">Sobre</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contato.html">Contato</a>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="os-hero">
+    <div class="os-container">
+      <div class="os-badge">✨ Novo produto</div>
+      <h1>Ordem de Serviço Digital</h1>
+      <p>Gerencie orçamentos e ordens de serviço com aprovação online. Perfeito para oficinas, assistência técnica e ar-condicionado.</p>
+      <p style="font-size: 1.1rem; color: var(--color-blue); font-weight: 600;">R$ 100/mês — Teste grátis por 7 dias</p>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="os-section os-container">
+    <h2>Por que usar?</h2>
+    <div class="os-grid-3">
+      <div class="os-card">
+        <div class="os-card-icon">📱</div>
+        <h3>Cliente aprova pelo link</h3>
+        <p>Envie o orçamento via WhatsApp. Cliente aprova sem ir presencialmente.</p>
+      </div>
+      <div class="os-card">
+        <div class="os-card-icon">⚡</div>
+        <h3>Rastreamento em tempo real</h3>
+        <p>Cliente acompanha o andamento da ordem no celular com QR code.</p>
+      </div>
+      <div class="os-card">
+        <div class="os-card-icon">📊</div>
+        <h3>Controle de pagamentos</h3>
+        <p>Registre pagamentos parciais e veja quanto falta receber.</p>
+      </div>
+      <div class="os-card">
+        <div class="os-card-icon">👥</div>
+        <h3>Múltiplos usuários</h3>
+        <p>Técnico, atendente e gerente com permissões diferentes.</p>
+      </div>
+      <div class="os-card">
+        <div class="os-card-icon">🔒</div>
+        <h3>Dados seguros</h3>
+        <p>Hospedado na Supabase com criptografia e backup automático.</p>
+      </div>
+      <div class="os-card">
+        <div class="os-card-icon">📋</div>
+        <h3>Histórico completo</h3>
+        <p>Fotos, anotações e eventos rastreados de cada ordem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="os-section os-container">
+    <h2>Como funciona</h2>
+    <div class="os-steps">
+      <div class="os-step">
+        <div class="os-step-num">1</div>
+        <div>
+          <h4>Cria ordem</h4>
+          <p>Registra o equipamento e defeito</p>
+        </div>
+      </div>
+      <div class="os-step">
+        <div class="os-step-num">2</div>
+        <div>
+          <h4>Faz orçamento</h4>
+          <p>Adiciona peças e serviços</p>
+        </div>
+      </div>
+      <div class="os-step">
+        <div class="os-step-num">3</div>
+        <div>
+          <h4>Envia ao cliente</h4>
+          <p>Link para aprovar</p>
+        </div>
+      </div>
+      <div class="os-step">
+        <div class="os-step-num">4</div>
+        <div>
+          <h4>Executa e entrega</h4>
+          <p>Rastreia pagamentos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="os-section" id="preco">
+    <div class="os-container" style="max-width: 500px;">
+      <div class="os-pricing">
+        <div class="os-pricing-card">
+          <h3>Plano Profissional</h3>
+          <p>Tudo que você precisa para gerenciar ordens de serviço</p>
+
+          <div class="os-price">R$ 100<span class="os-price-period">/mês</span></div>
+
+          <ul class="os-features">
+            <li>Ordens de serviço ilimitadas</li>
+            <li>Até 5 usuários</li>
+            <li>Aprovação online com link</li>
+            <li>QR code para cliente</li>
+            <li>Histórico com fotos</li>
+            <li>Controle de pagamentos</li>
+            <li>Suporte por email</li>
+          </ul>
+
+          <button class="os-button" id="checkout-btn">Começar teste grátis</button>
+          <p style="font-size: 0.85rem; color: var(--color-gray-600); margin-top: 15px;">7 dias grátis. Sem cartão de crédito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="os-section os-container">
+    <h2>Perguntas frequentes</h2>
+    <div class="os-faq">
+      <div class="os-faq-item">
+        <h4>Preciso de contrato?</h4>
+        <p>Não. Você pode cancelar quando quiser. Sem multa, sem amarração.</p>
+      </div>
+      <div class="os-faq-item">
+        <h4>Quantos usuários posso adicionar?</h4>
+        <p>Até 5 usuários simultâneos. Se precisar mais, contate-nos.</p>
+      </div>
+      <div class="os-faq-item">
+        <h4>Meus dados estão seguros?</h4>
+        <p>Sim. Hospedados na Supabase com backup automático diário e criptografia.</p>
+      </div>
+      <div class="os-faq-item">
+        <h4>Como faço pra começar?</h4>
+        <p>Clique no botão abaixo, preencha seu email e comece o teste grátis de 7 dias.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="os-cta-final os-container">
+    <h2>Pronto para começar?</h2>
+    <p>Teste grátis por 7 dias. Sem cartão de crédito. Sem compromisso.</p>
+    <button class="os-button" id="checkout-btn-final" style="background: white; color: var(--color-blue); border: 2px solid white; max-width: 300px;">Começar agora →</button>
+  </div>
+</main>
+
+<footer style="background: #0f172a; color: #cbd5e1; padding: 40px 20px; text-align: center; margin-top: 60px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <p>© 2026 FH Digital. Todos os direitos reservados.</p>
+    <p style="margin-top: 10px; font-size: 0.9rem;">
+      Dúvidas? <a href="mailto:fhdigital.com.br@gmail.com" style="color: #60a5fa; text-decoration: none;">fhdigital.com.br@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  // TODO: Integrar com Stripe Checkout
+  // Por enquanto, redireciona para um formulário de contato
+
+  document.querySelectorAll('#checkout-btn, #checkout-btn-final').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const email = prompt('Digite seu email para começar o teste grátis:');
+      if (email) {
+        // Enviar para WhatsApp como fallback
+        window.location.href = `https://wa.me/5519981577861?text=Olá! Gostaria de começar o teste grátis do OS FH. Email: ${encodeURIComponent(email)}`;
+      }
+    });
+  });
+</script>
+</body>
+</html>
