@@ -98,6 +98,7 @@
 /* Agenda FH (barbearia) e Adega FH */
 .produto.barbearia { --cor: #38bdf8; --cor-fundo: rgba(56, 189, 248, 0.12); }
 .produto.adega { --cor: #facc15; --cor-fundo: rgba(250, 204, 21, 0.12); }
+.produto.ordem { --cor: #a78bfa; --cor-fundo: rgba(167, 139, 250, 0.12); }
 .telas.celular { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); }
 @media (max-width: 760px) { .telas.celular { grid-template-columns: minmax(0, 1fr); } }
 .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
