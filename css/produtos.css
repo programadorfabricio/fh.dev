@@ -100,6 +100,7 @@
 .produto.adega { --cor: #facc15; --cor-fundo: rgba(250, 204, 21, 0.12); }
 .produto.gas { --cor: #2dd4bf; --cor-fundo: rgba(45, 212, 191, 0.12); }
 .produto.tabacaria { --cor: #e879f9; --cor-fundo: rgba(232, 121, 249, 0.12); }
+.produto.escola { --cor: #a3e635; --cor-fundo: rgba(163, 230, 53, 0.12); }
 .produto.ordem { --cor: #a78bfa; --cor-fundo: rgba(167, 139, 250, 0.12); }
 /* Cores por nicho do Ordem de Serviço FH */
 .produto.ordem.n-oficina-mecanica { --cor: #f59e0b; --cor-fundo: rgba(245, 158, 11, 0.12); }
