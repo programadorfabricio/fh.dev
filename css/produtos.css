@@ -99,6 +99,7 @@
 .produto.barbearia { --cor: #d6a756; --cor-fundo: rgba(214, 167, 86, 0.12); }
 .produto.adega { --cor: #facc15; --cor-fundo: rgba(250, 204, 21, 0.12); }
 .produto.gas { --cor: #2dd4bf; --cor-fundo: rgba(45, 212, 191, 0.12); }
+.produto.tabacaria { --cor: #e879f9; --cor-fundo: rgba(232, 121, 249, 0.12); }
 .produto.ordem { --cor: #a78bfa; --cor-fundo: rgba(167, 139, 250, 0.12); }
 /* Cores por nicho do Ordem de Serviço FH */
 .produto.ordem.n-oficina-mecanica { --cor: #f59e0b; --cor-fundo: rgba(245, 158, 11, 0.12); }
@@ -106,6 +107,7 @@
 .produto.ordem.n-assistencia-tecnica { --cor: #4ade80; --cor-fundo: rgba(74, 222, 128, 0.12); }
 .produto.ordem.n-ar-condicionado { --cor: #7dd3fc; --cor-fundo: rgba(125, 211, 252, 0.12); }
 .produto.ordem.n-lava-rapido { --cor: #3b82f6; --cor-fundo: rgba(59, 130, 246, 0.12); }
+.produto.ordem.n-funilaria-e-pintura { --cor: #ef4444; --cor-fundo: rgba(239, 68, 68, 0.12); }
 .telas.celular { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); }
 @media (max-width: 760px) { .telas.celular { grid-template-columns: minmax(0, 1fr); } }
 .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
