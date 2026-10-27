@@ -97,6 +97,10 @@
 
 /* Agenda FH (barbearia) e Adega FH */
 .produto.barbearia { --cor: #d6a756; --cor-fundo: rgba(214, 167, 86, 0.12); }
+.produto.barbearia.n-clinica-de-estetica { --cor: #2dd4bf; --cor-fundo: rgba(45, 212, 191, 0.12); }
+.produto.barbearia.n-banho-e-tosa { --cor: #38bdf8; --cor-fundo: rgba(56, 189, 248, 0.12); }
+.produto.barbearia.n-nail-designer { --cor: #c084fc; --cor-fundo: rgba(192, 132, 252, 0.12); }
+.produto.barbearia.n-salao-de-beleza { --cor: #f472b6; --cor-fundo: rgba(244, 114, 182, 0.12); }
 .produto.adega { --cor: #facc15; --cor-fundo: rgba(250, 204, 21, 0.12); }
 .produto.gas { --cor: #2dd4bf; --cor-fundo: rgba(45, 212, 191, 0.12); }
 .produto.tabacaria { --cor: #e879f9; --cor-fundo: rgba(232, 121, 249, 0.12); }
