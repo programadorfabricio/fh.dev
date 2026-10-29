@@ -54,26 +54,10 @@
         },
         {
           "@type": "Question",
-          "name": "O sistema lembra o endereço do cliente?",
+          "name": "Tem contrato ou fidelidade?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Lembra. Na segunda vez que o cliente pede, é só digitar o telefone que o nome, o endereço e o bairro aparecem preenchidos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Dá pra cadastrar gás com troca e sem troca do botijão?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dá. Você cadastra cada produto com o preço que cobra, por exemplo P13 com troca, P13 completo, água 20 L com troca e galão novo."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Tem taxa de entrega por bairro?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tem. Você cadastra os bairros com a taxa de cada um e ela entra sozinha no pedido. Se precisar, dá pra mudar a taxa na hora."
+            "text": "Não. No plano mensal você cancela quando quiser. A implantação (R$ 297) é paga uma vez só, e no plano anual ela sai grátis."
           }
         }
       ]
@@ -127,68 +111,38 @@
   </div>
 </div>
 
-<section>
-  <p class="section-label">Como fica no dia a dia</p>
-  <h2 class="section-title">O pedido chega no WhatsApp. Em segundos ele está com o motoboy.</h2>
-  <div class="telas">
-    <div>
-      <div class="tela">
-        <div class="tela-interna">
-          <div class="tela-topo"><div><span>Pedido nº 42 · (19) 99812-3344</span><br><b>Dona Maria</b></div><span class="ao-vivo">cliente já cadastrada</span></div>
-          <div class="lista">
-            <div class="item"><div>Gás P13 (troca)<small>1 × R$ 115,00</small></div><b>R$ 115,00</b></div>
-            <div class="item"><div>Água 20 L (troca)<small>2 × R$ 14,00</small></div><b>R$ 28,00</b></div>
-            <div class="item"><div>Taxa de entrega<small>Jardim Planalto</small></div><b>R$ 5,00</b></div>
-          </div>
-          <div class="total"><span>Troco p/ R$ 200</span><b>R$ 148,00</b></div>
-          <div class="carrinho"><span>Copiar pro motoboy</span><span>levar R$ 52,00</span></div>
-        </div>
-      </div>
-      <p class="tela-legenda">Pedido de entrega no computador ou no celular</p>
-    </div>
-    <div>
-      <div class="tela">
-        <div class="tela-interna">
-          <div class="tela-topo"><div><span>Hoje</span><br><b>Entregas</b></div><span class="ao-vivo">ao vivo</span></div>
-          <div class="numero"><b>R$ 3.940</b><span>36 entregas · R$ 180 em taxas</span></div>
-          <div class="lista">
-            <div class="item"><div>Pedido 43 · Rua das Acácias<small>Saiu há 12 min</small></div><span class="tag laranja">Na rua</span></div>
-            <div class="item"><div>Gás P13 cheio<small>Restam 6 un.</small></div><span class="tag ruim">Repor</span></div>
-            <div class="item"><div>Água 20 L<small>Restam 41 un.</small></div><span class="tag ok">OK</span></div>
-          </div>
-        </div>
-      </div>
-      <p class="tela-legenda">O dono acompanha pelo celular</p>
-    </div>
-  </div>
+<section class="local-campinas">
+  <p class="section-label">Distribuidoras de gás e água em Campinas</p>
+  <h2 class="section-title">Como é o dia a dia em Campinas</h2>
+  <p class="section-sub" style="margin-bottom:.9rem">Campinas é a maior cidade da região e cada bairro tem um ritmo diferente. Barão Geraldo tem o movimento dos universitários da Unicamp, o Cambuí e o Taquaral concentram bares e vida noturna, e regiões como Ouro Verde e Campo Grande têm comércio de bairro forte, com cliente que compra sempre no mesmo lugar.</p>
+  <p class="section-sub">Em Campinas a distância entre bairros pesa na entrega. Cada bairro tem a sua taxa cadastrada, e o quadro de pedidos mostra o que está separando, o que saiu e o que já foi entregue.</p>
 </section>
 
 <hr class="divider">
 
 <section>
-  <p class="section-label">Como funciona</p>
-  <h2 class="section-title">Do pedido no WhatsApp ao fechamento do caixa</h2>
+  <p class="section-label">Resumo do sistema</p>
+  <h2 class="section-title">O que vem no sistema</h2>
+  <ul class="lista-resumo" style="columns:2 260px;gap:2rem;color:var(--muted);line-height:1.9;padding-left:1.2rem;margin-bottom:1rem">
+    <li>Cliente salvo pelo telefone, com endereço</li>
+    <li>Taxa de entrega por bairro</li>
+    <li>Mensagem pronta pro entregador, com troco</li>
+    <li>Gás com troca e sem troca do botijão</li>
+    <li>Quadro de pedidos: separando, saiu, entregue</li>
+    <li>Fechamento de caixa e relatório do mês</li>
+  </ul>
+  <p class="nota"><a href="/distribuidora-de-gas-e-agua/">Ver todos os recursos e as telas do sistema para gás e água →</a></p>
+</section>
+
+<hr class="divider">
+
+<section>
+  <p class="section-label">Como começar em Campinas</p>
+  <h2 class="section-title">Do primeiro contato ao sistema no ar</h2>
   <div class="passos">
-    <div class="passo"><h3>Chega o pedido</h3><p>Digite o telefone: se o cliente já pediu antes, nome, endereço e bairro aparecem sozinhos. Escolha os produtos e a forma de pagamento.</p></div>
-    <div class="passo"><h3>Sai pro motoboy</h3><p>Um clique copia o pedido com endereço, valor e troco pra colar no WhatsApp do entregador. Outro clique avisa o cliente que saiu.</p></div>
-    <div class="passo"><h3>Entregue e no caixa</h3><p>Marcou entregue, o valor entra no caixa e no relatório e o estoque de botijão e galão já baixou.</p></div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<section>
-  <p class="section-label">O que está incluído</p>
-  <h2 class="section-title">Chega de caderno de pedidos e de conta no fim do dia</h2>
-  <div class="benefits-grid">
-    <div class="benefit-card"><div class="benefit-icon">🛵</div><h3>Pedidos de entrega</h3><p>Quadro com o que está separando, o que saiu e o que foi entregue, com tempo de cada pedido.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">📇</div><h3>Cliente salvo pelo telefone</h3><p>Quem pede sempre não precisa repetir o endereço. Digitou o número, preencheu.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">📍</div><h3>Taxa por bairro</h3><p>Cadastre os bairros com a taxa de entrega e ela entra sozinha no pedido.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">💵</div><h3>Troco pro motoboy</h3><p>O pedido já diz quanto o cliente vai pagar e quanto o entregador precisa levar de troco.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">📦</div><h3>Estoque de gás e água</h3><p>Baixa a cada entrega e avisa quando o botijão ou o galão está acabando.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Controle de caixa</h3><p>Abre com o troco, registra sangria e no fechamento mostra se o dinheiro bateu, sobrou ou faltou.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">💳</div><h3>Venda no balcão</h3><p>Quem busca na loja paga no caixa com Pix, cartão ou dinheiro, no mesmo sistema.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">📊</div><h3>Relatório do dia</h3><p>Quanto vendeu, em cada forma de pagamento, e quanto foi só de taxa de entrega.</p></div>
+    <div class="passo"><h3>Você chama no WhatsApp</h3><p>Conta como funciona a sua distribuidora em Campinas: quantos produtos tem, se faz entrega e quem fica no caixa.</p></div>
+    <div class="passo"><h3>Demonstração</h3><p>Campinas fica a uns 30 minutos de Paulínia. Dá pra mostrar o sistema aí na sua distribuidora ou por vídeo chamada, como for melhor pra você.</p></div>
+    <div class="passo"><h3>No ar em até 3 dias</h3><p>Com seus produtos, preços e o nome da distribuidora. Depois, o suporte é pelo WhatsApp.</p></div>
   </div>
 </section>
 
@@ -233,26 +187,18 @@
 <hr class="divider">
 
 <section>
-  <p class="section-label">Para quem é</p>
-  <h2 class="section-title">Quem vive de entrega</h2>
-  <p class="section-sub">Feito para a distribuidora que recebe pedido pelo WhatsApp e pelo telefone, anota o endereço no caderno e só descobre no fim do dia se o dinheiro do motoboy bateu.</p>
-  <div class="segmentos"><span>Distribuidoras de gás</span><span>Revendas de gás de cozinha</span><span>Distribuidoras de água mineral</span><span>Depósitos de gás e água</span><span>Disk entrega</span></div>
-</section>
-
-<hr class="divider">
-
-<section>
   <p class="section-label">Dúvidas</p>
   <h2 class="section-title">Perguntas frequentes</h2>
   <div class="faq-list">
     <div class="faq-item"><button class="faq-question">Vocês atendem em Campinas? <span class="faq-icon">+</span></button><div class="faq-answer">Sim. A FH Digital fica em Paulínia e atende Campinas e região. A demonstração pode ser no seu negócio, sem compromisso, e o suporte é pelo WhatsApp.</div></div>
-    <div class="faq-item"><button class="faq-question">O sistema lembra o endereço do cliente? <span class="faq-icon">+</span></button><div class="faq-answer">Lembra. Na segunda vez que o cliente pede, é só digitar o telefone que o nome, o endereço e o bairro aparecem preenchidos.</div></div>
-    <div class="faq-item"><button class="faq-question">Dá pra cadastrar gás com troca e sem troca do botijão? <span class="faq-icon">+</span></button><div class="faq-answer">Dá. Você cadastra cada produto com o preço que cobra, por exemplo P13 com troca, P13 completo, água 20 L com troca e galão novo.</div></div>
-    <div class="faq-item"><button class="faq-question">Tem taxa de entrega por bairro? <span class="faq-icon">+</span></button><div class="faq-answer">Tem. Você cadastra os bairros com a taxa de cada um e ela entra sozinha no pedido. Se precisar, dá pra mudar a taxa na hora.</div></div>
-    <div class="faq-item"><button class="faq-question">Preciso comprar computador? <span class="faq-icon">+</span></button><div class="faq-answer">Não necessariamente. O sistema abre no navegador: funciona no computador, no tablet ou no celular que você já tem.</div></div>
-    <div class="faq-item"><button class="faq-question">Emite nota fiscal? <span class="faq-icon">+</span></button><div class="faq-answer">Não. O sistema controla pedidos, entregas, estoque e caixa. Se você precisa emitir nota fiscal, fale com a gente que te orientamos.</div></div>
+    
+    
+    
+    
+    
     <div class="faq-item"><button class="faq-question">Tem contrato ou fidelidade? <span class="faq-icon">+</span></button><div class="faq-answer">Não. No plano mensal você cancela quando quiser. A implantação (R$ 297) é paga uma vez só, e no plano anual ela sai grátis.</div></div>
   </div>
+  <p class="nota" style="margin-top:1rem"><a href="/distribuidora-de-gas-e-agua/#faq">Mais perguntas sobre o sistema para gás e água →</a></p>
 </section>
 
 <section>

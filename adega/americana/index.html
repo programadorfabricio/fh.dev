@@ -30,16 +30,52 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "description": "Sistema para adega e distribuidora de bebidas com PDV (Pix, cartão e dinheiro), controle de estoque, comandas abertas e relatório de faturamento.",
-      "offers": { "@type": "Offer", "price": "129", "priceCurrency": "BRL" },
-      "provider": { "@type": "Organization", "name": "FH Digital", "url": "https://fhdigitalmarketing.com/" }
+      "offers": {
+        "@type": "Offer",
+        "price": "129",
+        "priceCurrency": "BRL"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "FH Digital",
+        "url": "https://fhdigitalmarketing.com/"
+      }
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "Mostra o que vende mais em cada dia?", "acceptedAnswer": {"@type": "Answer", "text": "Mostra. O relatório separa as vendas por dia e por produto, pra você comprar certo pro fim de semana."}},
-        { "@type": "Question", "name": "Preciso comprar computador?", "acceptedAnswer": { "@type": "Answer", "text": "Não necessariamente. O sistema abre no navegador: funciona no computador, no notebook, no tablet ou no celular." } },
-        { "@type": "Question", "name": "Funciona com a minha maquininha?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Você passa na maquininha que já usa e marca no sistema se foi Pix, débito, crédito ou dinheiro." } },
-        { "@type": "Question", "name": "O que está incluído na implantação?", "acceptedAnswer": { "@type": "Answer", "text": "Cadastro dos seus produtos e preços, estoque inicial e treinamento de quem vai usar o caixa." } }
+        {
+          "@type": "Question",
+          "name": "Atende adega fora da região de Campinas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atende. A demonstração, a implantação e o treinamento são por vídeo chamada, e o suporte é pelo WhatsApp. O sistema abre no navegador, então não precisa instalar nada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês atendem em Americana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A FH Digital fica em Paulínia e atende Americana e região. A demonstração pode ser no seu negócio, sem compromisso, e o suporte é pelo WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mostra o que vende mais em cada dia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostra. O relatório separa as vendas por dia e por produto, pra você comprar certo pro fim de semana."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva pra começar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em até 3 dias depois de você mandar a logo e a lista de produtos. O treinamento é por vídeo chamada (ou no balcão, na região de Campinas) e leva uns 15 minutos."
+          }
+        }
       ]
     }
   ]
@@ -95,75 +131,38 @@
   </div>
 </div>
 
-<section>
-  <p class="section-label">Como fica no dia a dia</p>
-  <h2 class="section-title">O caixa vende. Você vê o dinheiro e o estoque.</h2>
-  <div class="telas">
-    <div>
-      <div class="tela">
-        <div class="tela-interna">
-          <div class="tela-topo"><div><span>Adega do Bairro</span><br><b>Caixa</b></div><span class="ao-vivo">aberto</span></div>
-          <div class="pdv">
-            <div class="lista">
-              <div class="item"><div>Cerveja lata 350 ml<small>12 × R$ 4,50</small></div><b>R$ 54,00</b></div>
-              <div class="item"><div>Gelo 5 kg<small>2 × R$ 12,00</small></div><b>R$ 24,00</b></div>
-              <div class="item"><div>Energético 473 ml<small>1 × R$ 11,00</small></div><b>R$ 11,00</b></div>
-              <div class="item"><div>Carvão 4 kg<small>1 × R$ 22,00</small></div><b>R$ 22,00</b></div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:0.6rem">
-              <div class="total"><span>Total</span><b>R$ 111,00</b></div>
-              <div class="pagamentos"><span>Pix</span><span>Cartão</span><span class="sel">Dinheiro</span></div>
-              <div class="total"><span>Recebido R$ 150,00</span><span>Troco <b style="font-size:1rem">R$ 39,00</b></span></div>
-              <div class="carrinho"><span>Finalizar venda</span><span>R$ 111,00</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="tela-legenda">Tela do caixa, no computador ou no tablet</p>
-    </div>
-    <div>
-      <div class="tela">
-        <div class="tela-interna">
-          <div class="tela-topo"><div><span>Hoje</span><br><b>Resumo</b></div><span class="ao-vivo">ao vivo</span></div>
-          <div class="numero"><b>R$ 2.847</b><span>Vendido hoje · 64 vendas</span></div>
-          <div class="lista">
-            <div class="item"><div>Comanda 3<small>Mesa de fora · 6 itens</small></div><span class="tag laranja">Aberta</span></div>
-            <div class="item"><div>Cerveja long neck<small>Restam 8 un.</small></div><span class="tag ruim">Repor</span></div>
-            <div class="item"><div>Gelo 5 kg<small>Restam 14 un.</small></div><span class="tag ok">OK</span></div>
-          </div>
-        </div>
-      </div>
-      <p class="tela-legenda">O dono acompanha pelo celular</p>
-    </div>
-  </div>
+<section class="local-americana">
+  <p class="section-label">Adegas em Americana</p>
+  <h2 class="section-title">Como é o dia a dia em Americana</h2>
+  <p class="section-sub" style="margin-bottom:.9rem">Americana tem comércio tradicional, com muito negócio que passa de pai para filho e funciona há anos do mesmo jeito. Bairros como Praia Azul, Antônio Zanaga, São Vito e o Centro têm clientela fiel, e o que costuma faltar é controle: o dono sabe quem compra, mas não sabe quanto sobra no fim do mês.</p>
+  <p class="section-sub">O Adega FH substitui o caderno sem mudar o jeito de atender: o cliente de sempre pode ter comanda e até fiado, e no fim do mês o relatório mostra o que vendeu mais e quanto entrou em cada forma de pagamento.</p>
 </section>
 
 <hr class="divider">
 
 <section>
-  <p class="section-label">Como funciona</p>
-  <h2 class="section-title">Do balcão ao fechamento do dia</h2>
+  <p class="section-label">Resumo do Adega FH</p>
+  <h2 class="section-title">O que vem no sistema</h2>
+  <ul class="lista-resumo" style="columns:2 260px;gap:2rem;color:var(--muted);line-height:1.9;padding-left:1.2rem;margin-bottom:1rem">
+    <li>Caixa com Pix, cartão e dinheiro (até duas formas na mesma venda)</li>
+    <li>Estoque que baixa sozinho e avisa o que está acabando</li>
+    <li>Comandas pra quem bebe no local, com fiado</li>
+    <li>Delivery com taxa por bairro</li>
+    <li>Dose do copão saindo da garrafa aberta</li>
+    <li>Fechamento de caixa e relatório do mês</li>
+  </ul>
+  <p class="nota"><a href="/adega/">Ver todos os recursos e as telas do Adega FH →</a></p>
+</section>
+
+<hr class="divider">
+
+<section>
+  <p class="section-label">Como começar em Americana</p>
+  <h2 class="section-title">Do primeiro contato ao sistema no ar</h2>
   <div class="passos">
-    <div class="passo"><h3>O caixa vende</h3><p>Busca o produto, escolhe Pix, cartão ou dinheiro e o sistema calcula o troco. Venda registrada em segundos.</p></div>
-    <div class="passo"><h3>O estoque se atualiza</h3><p>Cada venda dá baixa no estoque. Você vê o que está acabando antes de faltar na geladeira.</p></div>
-    <div class="passo"><h3>Você vê o faturamento</h3><p>Quanto vendeu no dia, em cada forma de pagamento, e como foram os últimos dias.</p></div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<section>
-  <p class="section-label">O que está incluído</p>
-  <h2 class="section-title">Chega de caderno e de conta no fim da noite</h2>
-  <div class="benefits-grid">
-    <div class="benefit-card"><div class="benefit-icon">💳</div><h3>Caixa com Pix, cartão e dinheiro</h3><p>Venda rápida no balcão, com troco calculado e a forma de pagamento registrada.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">📦</div><h3>Controle de estoque</h3><p>Baixa automática a cada venda e aviso do que está acabando.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">🍺</div><h3>Comandas abertas</h3><p>Para quem bebe no local: vai lançando e fecha a conta no fim.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">🛵</div><h3>Delivery</h3><p>Pedido com endereço, bairro e taxa de entrega, troco pro motoboy e aviso pro cliente no WhatsApp.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Controle de caixa</h3><p>Abre com o troco, registra sangria e no fechamento mostra se o dinheiro bateu, sobrou ou faltou.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">📊</div><h3>Relatório de faturamento</h3><p>Vendas por dia e por forma de pagamento. Você sabe quanto entrou sem somar nada.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">🥃</div><h3>Dose do copão</h3><p>Cadastre quantos ml vai em cada copão: a dose sai da garrafa aberta e, quando ela acaba, baixa no estoque. <a href="/blog/como-controlar-dose-do-copao-na-adega.html" style="color:var(--cor)">Saiba mais</a></p></div>
-    <div class="benefit-card"><div class="benefit-icon">🧾</div><h3>Seus produtos e preços</h3><p>Cadastramos tudo na implantação. Depois você muda preço e produto quando quiser.</p></div>
+    <div class="passo"><h3>Você chama no WhatsApp</h3><p>Conta como funciona a sua adega em Americana: quantos produtos tem, se faz entrega e quem fica no caixa.</p></div>
+    <div class="passo"><h3>Demonstração</h3><p>Americana fica a uns 35 minutos de Paulínia. Dá pra mostrar o sistema aí na sua adega ou por vídeo chamada, como for melhor pra você.</p></div>
+    <div class="passo"><h3>No ar em até 3 dias</h3><p>Com seus produtos, preços e o nome da adega. Depois, o suporte é pelo WhatsApp.</p></div>
   </div>
 </section>
 
@@ -210,27 +209,19 @@
 <hr class="divider">
 
 <section>
-  <p class="section-label">Para quem é</p>
-  <h2 class="section-title">Quem vende bebida no balcão</h2>
-  <p class="section-sub">Feito para a adega que hoje anota no caderno, não sabe direito quanto vendeu no dia e só descobre que a cerveja acabou quando o cliente pede.</p>
-  <div class="segmentos"><span>Adegas</span><span>Distribuidoras de bebidas</span><span>Depósitos de bebidas</span><span>Tabacarias</span><span>Conveniências</span></div>
-</section>
-
-<hr class="divider">
-
-<section>
   <p class="section-label">Dúvidas</p>
   <h2 class="section-title">Perguntas frequentes</h2>
   <div class="faq-list">
     <div class="faq-item"><button class="faq-question">Atende adega fora da região de Campinas? <span class="faq-icon">+</span></button><div class="faq-answer">Atende. A demonstração, a implantação e o treinamento são por vídeo chamada, e o suporte é pelo WhatsApp. O sistema abre no navegador, então não precisa instalar nada.</div></div>
     <div class="faq-item"><button class="faq-question">Vocês atendem em Americana? <span class="faq-icon">+</span></button><div class="faq-answer">Sim. A FH Digital fica em Paulínia e atende Americana e região. A demonstração pode ser no seu negócio, sem compromisso, e o suporte é pelo WhatsApp.</div></div>
     <div class="faq-item"><button class="faq-question">Mostra o que vende mais em cada dia? <span class="faq-icon">+</span></button><div class="faq-answer">Mostra. O relatório separa as vendas por dia e por produto, pra você comprar certo pro fim de semana.</div></div>
-    <div class="faq-item"><button class="faq-question">Preciso comprar computador? <span class="faq-icon">+</span></button><div class="faq-answer">Não necessariamente. O sistema abre no navegador: funciona no computador, no notebook, no tablet ou no celular que você já tem.</div></div>
-    <div class="faq-item"><button class="faq-question">Funciona com a minha maquininha? <span class="faq-icon">+</span></button><div class="faq-answer">Sim. Você passa na maquininha que já usa e marca no sistema se foi Pix, cartão ou dinheiro. Assim o relatório mostra quanto entrou em cada um.</div></div>
-    <div class="faq-item"><button class="faq-question">O que está incluído na implantação? <span class="faq-icon">+</span></button><div class="faq-answer">O cadastro dos seus produtos e preços, o estoque inicial e o treinamento de quem vai usar o caixa.</div></div>
-    <div class="faq-item"><button class="faq-question">Emite nota fiscal? <span class="faq-icon">+</span></button><div class="faq-answer">Não. O Adega FH controla vendas, estoque e faturamento. Se você precisa emitir nota fiscal, fale com a gente que te orientamos.</div></div>
+    
+    
+    
+    
     <div class="faq-item"><button class="faq-question">Quanto tempo leva pra começar? <span class="faq-icon">+</span></button><div class="faq-answer">Em até 3 dias depois de você mandar a logo e a lista de produtos. O treinamento é por vídeo chamada (ou no balcão, na região de Campinas) e leva uns 15 minutos.</div></div>
   </div>
+  <p class="nota" style="margin-top:1rem"><a href="/adega/#faq">Mais perguntas sobre o Adega FH →</a></p>
 </section>
 
 <section>
