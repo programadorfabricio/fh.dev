@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstração Agenda FH | Barbearia</title>
+<meta name="description" content="Teste a Agenda FH: marque um horário como cliente e veja a agenda no painel do barbeiro.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://fhdigitalmarketing.com/barbearia/">
+<link rel="icon" type="image/webp" href="/imagens/favicon.webp">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-70XKXZ8JML"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-70XKXZ8JML');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--card:#13131a;--card2:#1b1b24;--borda:#2a2a36;--txt:#f2f2f5;--mut:#9a9aab;--cor:#d6a756;--corbg:rgba(214,167,86,.12);--verm:#f87171;--amar:#fbbf24}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--txt);font-family:"DM Sans",sans-serif;font-size:15px;line-height:1.45;min-height:100vh}
+button{font:inherit;color:inherit;cursor:pointer}
+.faixa{background:var(--corbg);color:var(--cor);font-size:.8rem;text-align:center;padding:.55rem 1rem;border-bottom:1px solid rgba(214,167,86,.25)}
+.faixa a{color:var(--cor);font-weight:700}
+.topo{max-width:560px;margin:0 auto;padding:1rem 16px .5rem;display:flex;gap:.5rem}
+.aba{flex:1;padding:.7rem;border-radius:12px;border:1px solid var(--borda);background:var(--card);font-weight:700;font-size:.9rem;color:var(--mut)}
+.aba.on{background:var(--cor);border-color:var(--cor);color:#0a0a0f}
+main{max-width:560px;margin:0 auto;padding:.5rem 16px 3rem}
+.loja{display:flex;align-items:center;gap:.8rem;margin:.8rem 0 1.2rem}
+.logo{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#1f2937,#111);border:1px solid var(--borda);display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.loja h1{font-family:Syne,sans-serif;font-size:1.25rem}
+.loja small{color:var(--mut);display:block}
+h2{font-family:Syne,sans-serif;font-size:1rem;margin:1.3rem 0 .6rem;display:flex;justify-content:space-between;align-items:baseline}
+h2 span{font-family:"DM Sans",sans-serif;font-size:.8rem;color:var(--mut);font-weight:400}
+.lista{display:grid;gap:.5rem}
+.op{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:.8rem 1rem}
+.op small{display:block;color:var(--mut);font-size:.8rem}
+.op b{white-space:nowrap}
+.op.on{border-color:var(--cor);background:var(--corbg)}
+.chips{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.chip{flex:0 0 auto;min-width:64px;text-align:center;background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:.55rem .7rem;font-size:.85rem}
+.chip small{display:block;color:var(--mut);font-size:.72rem}
+.chip.on{border-color:var(--cor);background:var(--cor);color:#0a0a0f}.chip.on small{color:#0a0a0f}
+.chip:disabled{opacity:.35;cursor:not-allowed}
+.horas{display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem}
+.hora{background:var(--card);border:1px solid var(--borda);border-radius:10px;padding:.55rem 0;font-weight:700;font-size:.9rem}
+.hora.on{background:var(--cor);border-color:var(--cor);color:#0a0a0f}
+.vazio{color:var(--mut);font-size:.88rem;padding:.8rem;background:var(--card);border-radius:12px;border:1px dashed var(--borda)}
+input{width:100%;background:var(--card);border:1px solid var(--borda);border-radius:10px;padding:.75rem .9rem;color:var(--txt);font:inherit;margin-bottom:.5rem}
+input:focus{outline:2px solid var(--cor);border-color:transparent}
+.btn{width:100%;background:var(--cor);color:#0a0a0f;border:0;border-radius:12px;padding:.9rem;font-weight:700;font-size:1rem;margin-top:.6rem}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.sec{background:var(--card2);color:var(--txt);border:1px solid var(--borda)}
+.resumo{background:var(--card);border:1px solid var(--borda);border-radius:14px;padding:1rem;margin-top:1.2rem;font-size:.9rem}
+.resumo div{display:flex;justify-content:space-between;padding:.2rem 0}.resumo span{color:var(--mut)}
+.ok{text-align:center;padding:1.5rem 0 .5rem}
+.ok .ic{width:64px;height:64px;border-radius:50%;background:var(--corbg);color:var(--cor);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto .8rem}
+.ok h2{justify-content:center;font-size:1.3rem}
+.zap{background:#0b141a;border:1px solid #1f2c33;border-radius:14px;padding:1rem;margin-top:1rem}
+.zap small{color:var(--mut);font-size:.75rem;display:block;margin-bottom:.5rem}
+.balao{background:#005c4b;border-radius:10px 10px 2px 10px;padding:.7rem .85rem;font-size:.88rem;white-space:pre-line;margin-left:12%}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.8rem}
+.kpi{background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:.7rem;text-align:center}
+.kpi b{display:block;font-family:Syne,sans-serif;font-size:1.25rem}.kpi small{color:var(--mut);font-size:.72rem}
+.ag{background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:.8rem .9rem;display:grid;grid-template-columns:52px 1fr auto;gap:.6rem;align-items:center}
+.ag .h{font-family:Syne,sans-serif;font-weight:700}
+.ag small{display:block;color:var(--mut);font-size:.8rem}
+.ag.novo{border-color:var(--cor)}
+.st{font-size:.72rem;font-weight:700;padding:.3rem .6rem;border-radius:999px;white-space:nowrap}
+.st.confirmado{background:rgba(96,165,250,.15);color:#93c5fd}.st.atendido{background:var(--corbg);color:var(--cor)}.st.faltou{background:rgba(248,113,113,.15);color:var(--verm)}
+.acoes{grid-column:1/-1;display:flex;gap:.4rem;flex-wrap:wrap}
+.mini{color:var(--txt);background:var(--card2);border:1px solid var(--borda);border-radius:8px;padding:.35rem .65rem;font-size:.78rem}
+.livre{display:flex;justify-content:space-between;color:var(--mut);font-size:.85rem;padding:.55rem .9rem;border:1px dashed var(--borda);border-radius:12px}
+.rodape{margin-top:2rem;padding:1.2rem;border-radius:14px;background:var(--card);border:1px solid var(--borda);text-align:center}
+.rodape p{color:var(--mut);font-size:.88rem;margin:.3rem 0 .8rem}
+.rodape a{display:inline-block;background:#25d366;color:#0a0a0f;font-weight:700;text-decoration:none;padding:.75rem 1.2rem;border-radius:12px}
+.link{background:none;border:0;color:var(--mut);font-size:.8rem;text-decoration:underline;margin-top:1rem}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="faixa">Demonstração da <b>Agenda FH</b> · teste à vontade, os dados ficam só no seu navegador · <a href="/barbearia/">voltar</a></div>
+<div class="topo">
+  <button class="aba on" data-modo="cliente">✂️ Sou cliente</button>
+  <button class="aba" data-modo="painel">💈 Sou o barbeiro</button>
+</div>
+<main>
+  <div class="loja"><div class="logo">💈</div><div><h1>Barbearia do Zé</h1><small>Rua das Flores, 120 · Centro · seg a sáb, 9h às 19h</small></div></div>
+
+  <section id="cliente"></section>
+  <section id="painel" class="hide"></section>
+
+  <div class="rodape">
+    <b>Gostou? Fica assim com a sua barbearia.</b>
+    <p>Com os seus serviços, barbeiros, horários e o seu link. R$ 129/mês, sem taxa de implantação.</p>
+    <a href="https://wa.me/5519981577861?text=Ol%C3%A1!%20Testei%20a%20demonstra%C3%A7%C3%A3o%20da%20Agenda%20FH%20e%20quero%20para%20a%20minha%20barbearia." target="_blank" rel="noopener">Quero na minha barbearia</a>
+    <br><button class="link" id="resetar">Recomeçar a demonstração</button>
+  </div>
+</main>
+<script>
+const SERVICOS=[
+  {id:"corte",nome:"Corte",min:40,preco:35},
+  {id:"combo",nome:"Corte + barba",min:60,preco:55},
+  {id:"barba",nome:"Barba",min:30,preco:30},
+  {id:"sobr",nome:"Sobrancelha",min:20,preco:15},
+  {id:"pigm",nome:"Corte + pigmentação",min:80,preco:75}
+];
+const BARBEIROS=["Lucas","Diego"];
+const ABRE=9*60, FECHA=19*60, PASSO=20;
+const DIAS=["dom","seg","ter","qua","qui","sex","sáb"];
+const MESES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+const NOMES=["Rafael M.","Bruno S.","Gabriel A.","Thiago R.","Felipe C.","Matheus L.","João P.","André V.","Caio N.","Vitor H.","Leandro B.","Murilo F."];
+const brl=v=>"R$ "+v.toFixed(2).replace(".",",");
+const hm=m=>String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const hoje=new Date(); hoje.setHours(0,0,0,0);
+const dias=[...Array(10)].map((_,i)=>{const d=new Date(hoje);d.setDate(d.getDate()+i);return d});
+const agoraMin=()=>{const n=new Date();return n.getHours()*60+n.getMinutes()};
+const serv=id=>SERVICOS.find(s=>s.id===id);
+const CHAVE="agendafh-demo-v1";
+
+function semente(){
+  const ag=[];let k=0;
+  dias.slice(0,4).forEach((d,di)=>{
+    if(d.getDay()===0)return;
+    BARBEIROS.forEach((b,bi)=>{
+      let m=ABRE+(bi?20:0);
+      while(m<FECHA-60){
+        const s=SERVICOS[(k*7+bi+di)%4];
+        if((k+di+bi)%3!==2){
+          const status=di===0&&m+s.min<agoraMin()?((k%7===3)?"faltou":"atendido"):"confirmado";
+          ag.push({id:"s"+k,dia:iso(d),ini:m,serv:s.id,barb:b,nome:NOMES[k%NOMES.length],tel:"",status});
+        }
+        m+=s.min+((k%4===1)?40:0);k++;
+      }
+    });
+  });
+  return ag;
+}
+let AG;
+try{AG=JSON.parse(localStorage.getItem(CHAVE)||"null")}catch(e){AG=null}
+if(!AG||!AG.length||AG[0].criado!==iso(hoje)){AG=semente();if(AG[0])AG[0].criado=iso(hoje)}
+const salvar=()=>{try{localStorage.setItem(CHAVE,JSON.stringify(AG))}catch(e){}};
+salvar();
+
+function ocupado(dia,barb,ini,min){
+  return AG.some(a=>a.dia===dia&&a.barb===barb&&a.status!=="faltou"&&ini<a.ini+serv(a.serv).min&&a.ini<ini+min);
+}
+function livres(dia,barb,min){
+  const d=new Date(dia+"T12:00");if(d.getDay()===0)return[];
+  const out=[];
+  for(let m=ABRE;m+min<=FECHA;m+=PASSO){
+    if(dia===iso(hoje)&&m<agoraMin()+20)continue;
+    const bs=barb==="qualquer"?BARBEIROS:[barb];
+    const b=bs.find(x=>!ocupado(dia,x,m,min));
+    if(b)out.push({m,b});
+  }
+  return out;
+}
+
+/* ---------- CLIENTE ---------- */
+const C={serv:null,barb:"qualquer",dia:null,hora:null,nome:"",tel:"",feito:null};
+function telaCliente(){
+  const el=document.getElementById("cliente");
+  if(C.feito){
+    const a=C.feito,s=serv(a.serv),d=new Date(a.dia+"T12:00");
+    const quando=`${DIAS[d.getDay()]}, ${d.getDate()} de ${MESES[d.getMonth()]}, às ${hm(a.ini)}`;
+    el.innerHTML=`<div class="ok"><div class="ic">✓</div><h2>Horário marcado!</h2><p style="color:var(--mut)">${s.nome} com ${a.barb}<br>${quando}</p></div>
+    <div class="zap"><small>Na véspera, o cliente recebe no WhatsApp:</small><div class="balao">Oi, ${a.nome.split(" ")[0]}! 💈 Lembrete do seu horário na Barbearia do Zé:
+${s.nome} com ${a.barb}, ${quando}.
+Se não puder vir, é só responder esta mensagem.</div></div>
+    <button class="btn" id="verPainel">Ver como aparece pro barbeiro →</button>
+    <button class="btn sec" id="novo">Marcar outro horário</button>`;
+    el.querySelector("#verPainel").onclick=()=>{P.dia=a.dia;P.barb=a.barb;P.destaque=a.id;modo("painel")};
+    el.querySelector("#novo").onclick=()=>{Object.assign(C,{serv:null,barb:"qualquer",dia:null,hora:null,feito:null});telaCliente()};
+    return;
+  }
+  const s=C.serv&&serv(C.serv);
+  let h=`<h2>1. Escolha o serviço</h2><div class="lista">${SERVICOS.map(x=>`<button class="op ${C.serv===x.id?"on":""}" data-serv="${x.id}"><div>${x.nome}<small>${x.min} min</small></div><b>${brl(x.preco)}</b></button>`).join("")}</div>`;
+  if(s){
+    h+=`<h2>2. Com quem?</h2><div class="chips">${["qualquer",...BARBEIROS].map(b=>`<button class="chip ${C.barb===b?"on":""}" data-barb="${b}">${b==="qualquer"?"Qualquer um":b}</button>`).join("")}</div>`;
+    h+=`<h2>3. Dia</h2><div class="chips">${dias.map(d=>{const k=iso(d),fech=d.getDay()===0;return`<button class="chip ${C.dia===k?"on":""}" data-dia="${k}" ${fech?"disabled":""}><small>${k===iso(hoje)?"hoje":DIAS[d.getDay()]}</small>${d.getDate()}/${d.getMonth()+1}</button>`}).join("")}</div>`;
+  }
+  if(s&&C.dia){
+    const ls=livres(C.dia,C.barb,s.min);
+    h+=`<h2>4. Horário <span>${ls.length} livres</span></h2>`;
+    h+=ls.length?`<div class="horas">${ls.map(x=>`<button class="hora ${C.hora&&C.hora.m===x.m?"on":""}" data-m="${x.m}" data-b="${x.b}">${hm(x.m)}</button>`).join("")}</div>`:`<div class="vazio">Sem horário livre nesse dia. Escolha outro dia ou outro barbeiro.</div>`;
+  }
+  if(s&&C.dia&&C.hora){
+    h+=`<h2>5. Seus dados</h2><input id="nome" placeholder="Seu nome" value="${C.nome}" autocomplete="name"><input id="tel" placeholder="WhatsApp (pra receber o lembrete)" inputmode="tel" value="${C.tel}">
+    <div class="resumo"><div><span>Serviço</span>${s.nome}</div><div><span>Barbeiro</span>${C.hora.b}</div><div><span>Quando</span>${C.dia.split("-").reverse().slice(0,2).join("/")} às ${hm(C.hora.m)}</div><div><span>Valor</span><b>${brl(s.preco)}</b></div></div>
+    <button class="btn" id="confirmar" ${C.nome.trim().length<2?"disabled":""}>Confirmar horário</button>`;
+  }
+  el.innerHTML=h;
+  el.querySelectorAll("[data-serv]").forEach(b=>b.onclick=()=>{C.serv=b.dataset.serv;C.hora=null;if(!C.dia)C.dia=iso(dias.find(d=>d.getDay()!==0));telaCliente()});
+  el.querySelectorAll("[data-barb]").forEach(b=>b.onclick=()=>{C.barb=b.dataset.barb;C.hora=null;telaCliente()});
+  el.querySelectorAll("[data-dia]").forEach(b=>b.onclick=()=>{C.dia=b.dataset.dia;C.hora=null;telaCliente()});
+  el.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{C.hora={m:+b.dataset.m,b:b.dataset.b};telaCliente();document.getElementById("nome").focus()});
+  const n=el.querySelector("#nome"),t=el.querySelector("#tel"),c=el.querySelector("#confirmar");
+  if(n){n.oninput=()=>{C.nome=n.value;c.disabled=C.nome.trim().length<2};t.oninput=()=>{C.tel=t.value}}
+  if(c)c.onclick=()=>{
+    const a={id:"c"+Date.now(),dia:C.dia,ini:C.hora.m,serv:C.serv,barb:C.hora.b,nome:C.nome.trim(),tel:C.tel,status:"confirmado"};
+    AG.push(a);salvar();C.feito=a;telaCliente();window.scrollTo({top:0,behavior:"smooth"});
+  };
+}
+
+/* ---------- PAINEL ---------- */
+const P={dia:iso(hoje),barb:"Lucas",destaque:null};
+function telaPainel(){
+  const el=document.getElementById("painel");
+  const lista=AG.filter(a=>a.dia===P.dia&&a.barb===P.barb).sort((a,b)=>a.ini-b.ini);
+  const previsto=lista.filter(a=>a.status!=="faltou").reduce((t,a)=>t+serv(a.serv).preco,0);
+  const recebido=lista.filter(a=>a.status==="atendido").reduce((t,a)=>t+serv(a.serv).preco,0);
+  const nLivres=livres(P.dia,P.barb,40).length;
+  let h=`<div class="chips">${BARBEIROS.map(b=>`<button class="chip ${P.barb===b?"on":""}" data-pb="${b}">💈 ${b}</button>`).join("")}</div>
+  <div class="chips" style="margin-top:.5rem">${dias.map(d=>{const k=iso(d);return`<button class="chip ${P.dia===k?"on":""}" data-pd="${k}" ${d.getDay()===0?"disabled":""}><small>${k===iso(hoje)?"hoje":DIAS[d.getDay()]}</small>${d.getDate()}/${d.getMonth()+1}</button>`}).join("")}</div>
+  <div class="kpis"><div class="kpi"><b>${lista.filter(a=>a.status!=="faltou").length}</b><small>agendados</small></div><div class="kpi"><b>${nLivres}</b><small>horários livres</small></div><div class="kpi"><b style="font-size:1rem;padding:.2rem 0">${brl(P.dia===iso(hoje)?recebido:previsto)}</b><small>${P.dia===iso(hoje)?"recebido hoje":"previsto"}</small></div></div>
+  <h2>Agenda de ${P.barb} <span>${new Date(P.dia+"T12:00").getDate()}/${new Date(P.dia+"T12:00").getMonth()+1}</span></h2><div class="lista">`;
+  if(new Date(P.dia+"T12:00").getDay()===0)h+=`<div class="vazio">Fechado no domingo.</div>`;
+  else if(!lista.length)h+=`<div class="vazio">Nenhum horário marcado. Mande o link no WhatsApp e no Instagram.</div>`;
+  let cursor=ABRE;
+  lista.forEach(a=>{
+    const s=serv(a.serv);
+    if(a.ini-cursor>=40)h+=`<div class="livre"><span>${hm(cursor)} – ${hm(a.ini)}</span><span>livre</span></div>`;
+    cursor=Math.max(cursor,a.ini+s.min);
+    const msg=encodeURIComponent(`Oi, ${a.nome.split(" ")[0]}! 💈 Lembrete do seu horário na Barbearia do Zé: ${s.nome} com ${a.barb}, dia ${a.dia.split("-").reverse().slice(0,2).join("/")} às ${hm(a.ini)}.`);
+    h+=`<div class="ag ${P.destaque===a.id?"novo":""}"><div class="h">${hm(a.ini)}</div><div>${a.nome}${P.destaque===a.id?" 🆕":""}<small>${s.nome} · ${brl(s.preco)}</small></div><span class="st ${a.status}">${a.status}</span>
+    ${a.status==="confirmado"?`<div class="acoes"><button class="mini" data-st="atendido" data-id="${a.id}">✓ Atendido</button><button class="mini" data-st="faltou" data-id="${a.id}">✕ Faltou</button><a class="mini" style="text-decoration:none" target="_blank" rel="noopener" href="https://wa.me/${(a.tel||"").replace(/\D/g,"").length>=10?"55"+a.tel.replace(/\D/g,""):""}?text=${msg}">💬 Lembrete</a></div>`:""}</div>`;
+  });
+  if(lista.length&&FECHA-cursor>=40)h+=`<div class="livre"><span>${hm(cursor)} – ${hm(FECHA)}</span><span>livre</span></div>`;
+  h+=`</div>`;
+  el.innerHTML=h;
+  el.querySelectorAll("[data-pb]").forEach(b=>b.onclick=()=>{P.barb=b.dataset.pb;telaPainel()});
+  el.querySelectorAll("[data-pd]").forEach(b=>b.onclick=()=>{P.dia=b.dataset.pd;telaPainel()});
+  el.querySelectorAll("[data-st]").forEach(b=>b.onclick=()=>{const a=AG.find(x=>x.id===b.dataset.id);a.status=b.dataset.st;salvar();telaPainel()});
+}
+
+function modo(m){
+  document.querySelectorAll(".aba").forEach(a=>a.classList.toggle("on",a.dataset.modo===m));
+  document.getElementById("cliente").classList.toggle("hide",m!=="cliente");
+  document.getElementById("painel").classList.toggle("hide",m!=="painel");
+  m==="cliente"?telaCliente():telaPainel();
+  window.scrollTo({top:0});
+}
+document.querySelectorAll(".aba").forEach(a=>a.onclick=()=>modo(a.dataset.modo));
+document.getElementById("resetar").onclick=()=>{AG=semente();if(AG[0])AG[0].criado=iso(hoje);salvar();Object.assign(C,{serv:null,barb:"qualquer",dia:null,hora:null,nome:"",tel:"",feito:null});P.destaque=null;modo("cliente")};
+telaCliente();
+</script>
+</body>
+</html>
