@@ -71,8 +71,8 @@ function enviarFormulario(event) {
         wrapper.innerHTML = `
       <div style="text-align:center;padding:48px 20px;">
         <div style="font-size:3rem;margin-bottom:16px;">✅</div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:700;margin-bottom:10px;color:#f0eefc;">Mensagem enviada, ${nome}!</h3>
-        <p style="color:#8b8a9b;line-height:1.7;margin-bottom:24px;">Recebi tudo certinho. Entrarei em contato em até <strong style="color:#f0eefc;">24 horas</strong>.</p>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:700;margin-bottom:10px;color:#0f172a;">Mensagem enviada, ${nome}!</h3>
+        <p style="color:#475569;line-height:1.7;margin-bottom:24px;">Recebi tudo certinho. Entrarei em contato em até <strong style="color:#0f172a;">24 horas</strong>.</p>
         <a href="https://wa.me/5519981577861" target="_blank" style="display:inline-block;background:#25d366;color:#fff;padding:12px 28px;border-radius:100px;text-decoration:none;font-weight:600;font-size:0.9rem;">Falar pelo WhatsApp</a>
       </div>`;
     })

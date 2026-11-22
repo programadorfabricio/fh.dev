@@ -1,5 +1,13 @@
+/* Fonte dos títulos hospedada no próprio site. "Syne" é um apelido: qualquer lugar antigo que pedia Syne agora usa Plus Jakarta Sans. */
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 400 600; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 800; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Syne"; font-style: normal; font-weight: 400 600; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Syne"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Syne"; font-style: normal; font-weight: 800; font-display: swap; src: url("/fonts/plus-jakarta-sans-latin-800-normal.woff2") format("woff2"); }
+
 /* =========================================================
-   TEMA CLARO — página inicial (carregado depois do style.css)
+   TEMA CLARO — site inteiro (carregado depois do style.css / produtos.css)
    ========================================================= */
 body.tema-claro {
   --bg: #ffffff;
@@ -153,27 +161,27 @@ body.tema-claro {
 .tema-claro .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 /* SEÇÕES — fundo alternado em largura total */
-.tema-claro main > section { padding: 5.5rem 2.5rem; }
-.tema-claro main > section:nth-of-type(odd) {
+.home main > section { padding: 5.5rem 2.5rem; }
+.home main > section:nth-of-type(odd) {
   box-shadow: 0 0 0 100vmax var(--bg2);
   clip-path: inset(0 -100vmax);
   background: var(--bg2);
 }
 
 /* COMO FUNCIONA */
-.passos {
+.home .passos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
   margin-top: 2.5rem;
 }
-.passo {
+.home .passo {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.6rem;
 }
-.passo-num {
+.home .passo-num {
   width: 34px; height: 34px;
   border-radius: 50%;
   background: var(--accent-glow);
@@ -182,8 +190,8 @@ body.tema-claro {
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 1rem;
 }
-.passo h3 { font-size: 1.02rem; margin-bottom: 0.4rem; color: var(--text); }
-.passo p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+.home .passo h3 { font-size: 1.02rem; margin-bottom: 0.4rem; color: var(--text); }
+.home .passo p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
 /* CARDS DE SERVIÇO / SISTEMA */
 .tema-claro .services-grid {
@@ -298,18 +306,18 @@ body.tema-claro {
 /* RESPONSIVO */
 @media (max-width: 960px) {
   .tema-claro .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-  .passos { grid-template-columns: repeat(2, 1fr); }
+  .home .passos { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   .tema-claro .hero { padding: 6.5rem 1.2rem 3.5rem; }
-  .tema-claro main > section { padding: 4rem 1.2rem; }
+  .home main > section { padding: 4rem 1.2rem; }
   .tema-claro .hero h1 { font-size: 2rem; }
   .hero-provas { flex-direction: column; gap: 0.5rem; }
   .tema-claro .hero-actions a { width: 100%; text-align: center; }
   .cta-final { padding: 2.5rem 1.4rem; }
 }
 @media (max-width: 520px) {
-  .passos { grid-template-columns: 1fr; }
+  .home .passos { grid-template-columns: 1fr; }
 }
 
 /* ajustes de preço */
@@ -349,7 +357,66 @@ body.tema-claro {
 .tema-claro .testimonial-text { font-style: normal; }
 
 /* mais respiro entre seções */
-.tema-claro main > section { padding-top: 6.5rem; padding-bottom: 6.5rem; }
+.home main > section { padding-top: 6.5rem; padding-bottom: 6.5rem; }
 @media (max-width: 768px) {
-  .tema-claro main > section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+  .home main > section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
 }
+
+
+/* =========================================================
+   PÁGINAS DE PRODUTO (produtos.css) — cores de destaque mais
+   fortes para ler bem no fundo claro
+   ========================================================= */
+body.tema-claro.produto { --cor: #059669; }
+body.tema-claro.produto.comanda { --cor: #ea580c; }
+body.tema-claro.produto.barbearia { --cor: #b45309; }
+body.tema-claro.produto.barbearia.n-clinica-de-estetica { --cor: #0d9488; }
+body.tema-claro.produto.barbearia.n-banho-e-tosa { --cor: #0284c7; }
+body.tema-claro.produto.barbearia.n-nail-designer { --cor: #9333ea; }
+body.tema-claro.produto.barbearia.n-salao-de-beleza { --cor: #db2777; }
+body.tema-claro.produto.adega { --cor: #a16207; }
+body.tema-claro.produto.gas { --cor: #0d9488; }
+body.tema-claro.produto.tabacaria { --cor: #c026d3; }
+body.tema-claro.produto.escola { --cor: #4d7c0f; }
+body.tema-claro.produto.escola.n-academia { --cor: #ea580c; }
+body.tema-claro.produto.ordem { --cor: #7c3aed; }
+body.tema-claro.produto.ordem.n-oficina-mecanica { --cor: #b45309; }
+body.tema-claro.produto.ordem.n-oficina-de-moto { --cor: #ea580c; }
+body.tema-claro.produto.ordem.n-assistencia-tecnica { --cor: #16a34a; }
+body.tema-claro.produto.ordem.n-ar-condicionado { --cor: #0284c7; }
+body.tema-claro.produto.ordem.n-lava-rapido { --cor: #2563eb; }
+body.tema-claro.produto.ordem.n-funilaria-e-pintura { --cor: #dc2626; }
+body.tema-claro.produto.delivery { --cor: #e11d48; }
+body.tema-claro.produto.produto.produto.produto { --cor-fundo: color-mix(in srgb, var(--cor) 10%, #ffffff); }
+
+.tema-claro.produto .btn-primary,
+.tema-claro.produto .cta-banner .btn-primary { background: var(--cor); color: #fff; box-shadow: none; }
+.tema-claro.produto .btn-primary:hover { filter: brightness(0.92); }
+.tema-claro .plano .selo { color: #fff; }
+.tema-claro .plano, .tema-claro .extra, .tema-claro .passo { background: #fff; }
+.tema-claro .segmentos span, .tema-claro .cidades-links a { background: #fff; }
+
+/* As telas desenhadas do sistema continuam escuras, como o app de verdade */
+.tema-claro .tela, .tema-claro .camera {
+  --bg2: #111118; --bg3: #18181f;
+  --border: rgba(255, 255, 255, 0.07); --border-light: rgba(255, 255, 255, 0.13);
+  --text: #f0eefc; --muted: #9d9cac; --muted2: #7a7988;
+  color: var(--text);
+  box-shadow: 0 30px 60px -24px rgba(15, 23, 42, 0.35);
+}
+.tema-claro .tela .horarios span.sel, .tema-claro .tela .carrinho, .tema-claro .camera .ok { color: #fff; }
+
+/* =========================================================
+   OUTRAS PÁGINAS (serviços, cidades, blog, sobre, projetos)
+   ========================================================= */
+.tema-claro .service-hero { background: linear-gradient(180deg, #f4f5ff 0%, #ffffff 100%); border-bottom: 1px solid var(--border); }
+.tema-claro .service-hero h1, .tema-claro .city-hero h1 { font-family: var(--titulo); font-weight: 800; color: var(--text); }
+.tema-claro .cta-banner, .tema-claro .about-card, .tema-claro .form-wrapper { background: var(--bg2); }
+.tema-claro .cta-banner::before, .tema-claro .about-card::before, .tema-claro .form-wrapper::before,
+.tema-claro .hero-glow, .tema-claro .hero-glow2, .tema-claro .city-glow, .tema-claro .city-glow2 { display: none; }
+.tema-claro .form-group input, .tema-claro .form-group textarea, .tema-claro .form-group select { background: #fff; }
+.tema-claro .skill-chip, .tema-claro .contact-link, .tema-claro .tech-item { background: #fff; }
+.tema-claro .testimonial-card, .tema-claro .pricing-card, .tema-claro .faq-item { background: #fff; }
+.tema-claro .city-hero .city-inner { max-width: 1100px; width: 100%; margin: 0 auto; }
+.tema-claro .city-hero { min-height: auto; padding-top: 8.5rem; background: linear-gradient(180deg, #f4f5ff 0%, #ffffff 100%); }
+.tema-claro .city-badge { background: #fff; }
