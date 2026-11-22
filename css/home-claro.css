@@ -316,3 +316,40 @@ body.tema-claro {
 .tema-claro .pricing-btn.featured-btn { background: var(--accent); border-color: var(--accent); color: #fff; }
 .tema-claro .pricing-price { font-size: 1.7rem; white-space: nowrap; }
 .tema-claro .pricing-price.custom-price { font-size: 1.5rem; }
+
+/* ===== CLEAN: menos elementos, menos movimento ===== */
+/* só 2 fontes: Plus Jakarta Sans (títulos) + DM Sans (texto) */
+.tema-claro .nav-logo, .tema-claro .logo-name-main { font-family: var(--titulo); font-weight: 800; }
+
+/* sem animações de entrada nem efeitos que "pulam" */
+.tema-claro .hero-badge, .tema-claro .hero h1, .tema-claro .hero-sub,
+.tema-claro .hero-actions, .hero-provas, .hero-visual { animation: none; }
+.tema-claro .badge-dot { animation: none; }
+.tema-claro .service-card:hover { transform: none; box-shadow: none; }
+
+/* cards: sem emoji, segmento discreto em cima, título, texto e link */
+.tema-claro .service-card { display: flex; flex-direction: column; padding: 1.8rem; }
+.tema-claro .service-icon { display: none; }
+.tema-claro .service-tag {
+  order: -1;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  background: none;
+  color: var(--muted2);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.tema-claro .service-card p { flex: 1; }
+.tema-claro .service-arrow { margin-top: 1.2rem; }
+
+/* depoimentos sem aspas decorativas nem itálico */
+.tema-claro .testimonial-quote { display: none; }
+.tema-claro .testimonial-text { font-style: normal; }
+
+/* mais respiro entre seções */
+.tema-claro main > section { padding-top: 6.5rem; padding-bottom: 6.5rem; }
+@media (max-width: 768px) {
+  .tema-claro main > section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+}
