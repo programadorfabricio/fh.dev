@@ -548,3 +548,5 @@ body.tema-claro.produto.produto.produto.produto { --cor-fundo: color-mix(in srgb
   .rodape-marca { grid-column: 1 / -1; }
   .rodape-base { padding: 1.2rem 1.2rem 5.5rem; }
 }
+.prova-google { color: inherit; text-decoration: none; border-bottom: 1px dashed #cbd5e1; }
+.prova-google:hover { color: var(--accent); border-color: var(--accent); }
