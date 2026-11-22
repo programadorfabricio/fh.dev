@@ -550,3 +550,6 @@ body.tema-claro.produto.produto.produto.produto { --cor-fundo: color-mix(in srgb
 }
 .prova-google { color: inherit; text-decoration: none; border-bottom: 1px dashed #cbd5e1; }
 .prova-google:hover { color: var(--accent); border-color: var(--accent); }
+.depo-mais { margin-top: 1.8rem; }
+.depo-mais a { color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+.depo-mais a:hover { text-decoration: underline; }
